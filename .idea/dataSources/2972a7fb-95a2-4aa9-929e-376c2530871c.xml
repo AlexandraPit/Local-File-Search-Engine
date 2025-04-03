@@ -3,15 +3,7 @@
   <database-model serializer="dbm" dbms="POSTGRES" family-id="POSTGRES" format-version="4.53">
     <root id="1">
       <DateStyle>dmy</DateStyle>
-      <Grants>1||-9223372036854775808|c|G
-1||10|c|G
-1||10|C|G
-1||10|T|G
-4||-9223372036854775808|c|G
-4||10|c|G
-4||10|C|G
-4||10|T|G</Grants>
-      <IntrospectionStateNumber>974</IntrospectionStateNumber>
+      <IntrospectionStateNumber>1017</IntrospectionStateNumber>
       <ServerVersion>17.0</ServerVersion>
       <StartupTime>1741946488</StartupTime>
       <TimeZones>true ACDT
@@ -114,7 +106,7 @@ false America/Argentina/San_Luis
 false America/Argentina/Tucuman
 false America/Argentina/Ushuaia
 false America/Aruba
-true America/Asuncion
+false America/Asuncion
 false America/Atikokan
 true America/Atka
 false America/Bahia
@@ -685,7 +677,7 @@ false PST
 true PST8PDT
 false PWT
 true PYST
-true PYT
+false PYT
 false Pacific/Apia
 true Pacific/Auckland
 false Pacific/Bougainville
@@ -808,7 +800,7 @@ false Zulu
 14751||10|C|G
 14751||-9223372036854775808|U|G
 14751||10|U|G</Grants>
-      <IntrospectionStateNumber>974</IntrospectionStateNumber>
+      <IntrospectionStateNumber>1017</IntrospectionStateNumber>
       <ObjectId>25104</ObjectId>
       <OwnerName>postgres</OwnerName>
     </database>
@@ -4239,67 +4231,79 @@ false Zulu
     <schema id="266" parent="2" name="public">
       <Comment>standard public schema</Comment>
       <Current>1</Current>
-      <IntrospectionStateNumber>974</IntrospectionStateNumber>
-      <LastIntrospectionLocalTimestamp>2025-03-21.10:40:29</LastIntrospectionLocalTimestamp>
+      <IntrospectionStateNumber>1017</IntrospectionStateNumber>
+      <LastIntrospectionLocalTimestamp>2025-03-23.19:59:33</LastIntrospectionLocalTimestamp>
       <ObjectId>2200</ObjectId>
       <StateNumber>532</StateNumber>
       <OwnerName>pg_database_owner</OwnerName>
     </schema>
     <table id="267" parent="266" name="files">
-      <ObjectId>25113</ObjectId>
-      <StateNumber>970</StateNumber>
+      <ObjectId>25121</ObjectId>
+      <StateNumber>1016</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
     <column id="268" parent="267" name="path">
       <NotNull>1</NotNull>
       <Position>1</Position>
-      <StateNumber>970</StateNumber>
+      <StateNumber>977</StateNumber>
       <StoredType>text|0s</StoredType>
       <TypeId>25</TypeId>
     </column>
     <column id="269" parent="267" name="name">
       <Position>2</Position>
-      <StateNumber>970</StateNumber>
+      <StateNumber>977</StateNumber>
       <StoredType>text|0s</StoredType>
       <TypeId>25</TypeId>
     </column>
     <column id="270" parent="267" name="extension">
       <Position>3</Position>
-      <StateNumber>970</StateNumber>
+      <StateNumber>977</StateNumber>
       <StoredType>text|0s</StoredType>
       <TypeId>25</TypeId>
     </column>
     <column id="271" parent="267" name="content">
       <Position>4</Position>
-      <StateNumber>970</StateNumber>
+      <StateNumber>977</StateNumber>
       <StoredType>text|0s</StoredType>
       <TypeId>25</TypeId>
     </column>
     <column id="272" parent="267" name="content_tsvector">
       <Position>5</Position>
-      <StateNumber>970</StateNumber>
+      <StateNumber>977</StateNumber>
       <StoredType>tsvector|0s</StoredType>
       <TypeId>3614</TypeId>
     </column>
-    <index id="273" parent="267" name="files_pkey">
+    <column id="273" parent="267" name="last_modified">
+      <Position>6</Position>
+      <StateNumber>1016</StateNumber>
+      <StoredType>timestamp|0s</StoredType>
+      <TypeId>1114</TypeId>
+    </column>
+    <index id="274" parent="267" name="files_pkey">
       <ColNames>path</ColNames>
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>25118</ObjectId>
+      <ObjectId>25126</ObjectId>
       <Primary>1</Primary>
-      <StateNumber>970</StateNumber>
+      <StateNumber>977</StateNumber>
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
       <CollationNames>default</CollationNames>
       <CollationIds>100</CollationIds>
       <CollationParentNames>pg_catalog</CollationParentNames>
     </index>
-    <key id="274" parent="267" name="files_pkey">
+    <index id="275" parent="267" name="idx_files_content_tsvector">
+      <ColNames>content_tsvector</ColNames>
+      <ObjectId>25128</ObjectId>
+      <StateNumber>977</StateNumber>
+      <AccessMethodId>2742</AccessMethodId>
+    </index>
+    <key id="276" parent="267" name="files_pkey">
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>25119</ObjectId>
+      <ObjectId>25127</ObjectId>
       <Primary>1</Primary>
-      <StateNumber>970</StateNumber>
-      <UnderlyingIndexId>25118</UnderlyingIndexId>
+      <StateNumber>977</StateNumber>
+      <UnderlyingIndexId>25126</UnderlyingIndexId>
     </key>
   </database-model>
 </dataSource>

@@ -16,6 +16,27 @@ def clear_database(db_name, user, password, host, port):
             cursor.close()
             conn.close()
 
+def is_txt(db_name, user, password, host, port, file_path):
+    conn = connect_to_db(db_name, user, password, host, port)
+    if conn:
+        cursor = conn.cursor()
+        try:
+            cursor.execute("SELECT extension FROM files WHERE path = %s", (file_path,))
+            result = cursor.fetchone()
+            if result:
+                print(result[0])
+                if result[0]==".txt":
+                    return True
+                else:
+                    return False
+        except psycopg2.Error as e:
+            print(f"Database error during preview: {e}")
+            return False
+        finally:
+            cursor.close()
+            conn.close()
+    return False
+
 def get_file_preview(db_name, user, password, host, port, file_path):
     """
     Fetches a short preview of the file content from the database.
@@ -29,7 +50,7 @@ def get_file_preview(db_name, user, password, host, port, file_path):
         file_path (str): The path of the selected file.
 
     Returns:
-        str: A preview of the file content (first 3 words).
+        str: A preview of the file content.
     """
     conn = connect_to_db(db_name, user, password, host, port)
     if conn:
@@ -39,7 +60,7 @@ def get_file_preview(db_name, user, password, host, port, file_path):
             result = cursor.fetchone()
             if result:
                 content = result[0]
-                return " ".join(content.split())   # First 3 words
+                return " ".join(content.split())
             return "(No content)"
         except psycopg2.Error as e:
             print(f"Database error during preview: {e}")
@@ -49,6 +70,7 @@ def get_file_preview(db_name, user, password, host, port, file_path):
             conn.close()
     return "(No preview available)"
 
+#searcher!!
 
 def search_files(db_name, user, password, host, port, query):
     """
@@ -76,7 +98,7 @@ def search_files(db_name, user, password, host, port, query):
 
             # 2. Execute the query
             cursor.execute("""
-                SELECT path, substring(content FROM 1 FOR 50)
+                SELECT path, content
                 FROM files
                 WHERE (content_tsvector @@ to_tsquery('english', %s)) 
                    OR (name ILIKE %s)

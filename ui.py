@@ -66,7 +66,7 @@ class SearchApp:
         self.root_dir = filedialog.askdirectory()
         if self.root_dir:
             self.dir_label.config(text=self.root_dir)
-
+#controller!!
     def start_indexing(self):
         if self.root_dir:
             indexer.crawl_and_index(self.root_dir, self.db_name, self.db_user, self.db_password, self.db_host, self.db_port)
@@ -106,11 +106,11 @@ class SearchApp:
         selected_index = self.results_listbox.curselection()
         if selected_index:
             file_path = self.results_listbox.get(selected_index)
-            print(file_path)
-            # Query the database for file content preview
-            preview_text = database.get_file_preview(self.db_name, self.db_user, self.db_password, self.db_host,
+            if database.is_txt(self.db_name, self.db_user, self.db_password, self.db_host, self.db_port, file_path):
+                preview_text = database.get_file_preview(self.db_name, self.db_user, self.db_password, self.db_host,
                                                      self.db_port, file_path)
-            print(preview_text)
+            else:
+                preview_text = ""
             # Display the first few words in the preview label
             self.preview_label.config(text=f"Preview: {preview_text}")
 
