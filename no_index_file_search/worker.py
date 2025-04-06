@@ -1,7 +1,5 @@
 import os
-import json
-import multiprocessing
-import requests
+
 from flask import Flask, request, jsonify
 
 
@@ -10,7 +8,6 @@ def start_worker(root_dir, port):
     worker.run()
 
 
-# Worker class to handle file searching
 class Worker:
     def __init__(self, root_dir, port):
         self.root_dir = root_dir
