@@ -1,121 +1,39 @@
 import psycopg2
-from db_utils import connect_to_db
 
-def clear_database(db_name, user, password, host, port):
-    """Deletes all indexed files from the database."""
-    conn = connect_to_db(db_name, user, password, host, port)
-    if conn:
-        cursor = conn.cursor()
-        try:
-            cursor.execute("DELETE FROM files;")  # Clears all indexed data
-            conn.commit()
-            print("Database cleared on exit.")
-        except psycopg2.Error as e:
-            print(f"Error clearing database: {e}")
-        finally:
-            cursor.close()
-            conn.close()
+def setup_database(host, port, dbname, user, password):
+    try:
+        conn = psycopg2.connect(
+            host=host,
+            port=port,
+            dbname=dbname,
+            user=user,
+            password=password
+        )
+        cur = conn.cursor()
 
-def is_txt(db_name, user, password, host, port, file_path):
-    conn = connect_to_db(db_name, user, password, host, port)
-    if conn:
-        cursor = conn.cursor()
-        try:
-            cursor.execute("SELECT extension FROM files WHERE path = %s", (file_path,))
-            result = cursor.fetchone()
-            if result:
-                print(result[0])
-                if result[0]==".txt":
-                    return True
-                else:
-                    return False
-        except psycopg2.Error as e:
-            print(f"Database error during preview: {e}")
-            return False
-        finally:
-            cursor.close()
-            conn.close()
-    return False
+        cur.execute("""
+            CREATE TABLE IF NOT EXISTS files (
+                id SERIAL PRIMARY KEY,
+                path TEXT NOT NULL,
+                name TEXT NOT NULL,
+                extension TEXT,
+                content TEXT,
+                content_tsvector TSVECTOR
+            );
+        """)
 
-def get_file_preview(db_name, user, password, host, port, file_path):
-    """
-    Fetches a short preview of the file content from the database.
+        cur.execute("CREATE INDEX IF NOT EXISTS idx_content_tsvector ON files USING GIN(content_tsvector);")
 
-    Args:
-        db_name (str): The name of the PostgreSQL database.
-        user (str): PostgreSQL username.
-        password (str): PostgreSQL password.
-        host (str): PostgreSQL host.
-        port (str): PostgreSQL port.
-        file_path (str): The path of the selected file.
+        conn.commit()
+        cur.close()
+        conn.close()
+        print("Database setup complete.")
+    except psycopg2.Error as e:
+        print(f"Error setting up database: {e}")
 
-    Returns:
-        str: A preview of the file content.
-    """
-    conn = connect_to_db(db_name, user, password, host, port)
-    if conn:
-        cursor = conn.cursor()
-        try:
-            cursor.execute("SELECT content FROM files WHERE path = %s", (file_path,))
-            result = cursor.fetchone()
-            if result:
-                content = result[0]
-                return " ".join(content.split())
-            return "(No content)"
-        except psycopg2.Error as e:
-            print(f"Database error during preview: {e}")
-            return "(Error fetching preview)"
-        finally:
-            cursor.close()
-            conn.close()
-    return "(No preview available)"
+def clear_database(conn):
+    with conn.cursor() as cur:
+        cur.execute("DELETE FROM files")
+        conn.commit()
+    print("Database cleared.")
 
-#searcher!!
-
-def search_files(db_name, user, password, host, port, query):
-    """
-    Searches the database for files matching the query using PostgreSQL's full-text search.
-
-    Args:
-        db_name (str): The name of the PostgreSQL database.
-        user (str): PostgreSQL username.
-        password (str): PostgreSQL password.
-        host (str): PostgreSQL host.
-        port (str): PostgreSQL port.
-        query (str): The search query string.
-
-    Returns:
-        list: A list of file paths that match the query.
-    """
-
-    conn = connect_to_db(db_name, user, password, host, port)
-    if conn:
-        cursor = conn.cursor()
-
-        try:
-            # 1. Construct the full-text search query
-            ts_query = " & ".join(query.split())  # Combine words with the AND operator
-
-            # 2. Execute the query
-            cursor.execute("""
-                SELECT path, content
-                FROM files
-                WHERE (content_tsvector @@ to_tsquery('english', %s)) 
-                   OR (name ILIKE %s)
-            """, (ts_query, f"%{query}%"))
-
-            # 3. Fetch the results
-            results = cursor.fetchall()
-
-            return results
-
-        except psycopg2.Error as e:
-            print(f"Database error during search: {e}")
-            return# Return an empty list in case of an error
-
-        finally:
-            cursor.close()
-            conn.close()
-    else:
-        print("Search failed: Could not connect to the database.")
-        return

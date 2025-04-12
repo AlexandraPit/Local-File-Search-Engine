@@ -1,16 +1,14 @@
 import psycopg2
 
-def connect_to_db(db_name, user, password, host, port):
-    """Connects to the PostgreSQL database."""
+def connect_to_db(host, port, dbname, user, password):
     try:
-        conn = psycopg2.connect(
-          dbname=db_name,
-          user=user,
-          password=password,
-          host=host,
-          port=port
+        return psycopg2.connect(
+            host=host,
+            port=port,
+            dbname=dbname,
+            user=user,
+            password=password
         )
-        return conn
     except psycopg2.Error as e:
-        print(f"Error connecting to database: {e}")
+        print(f"Database connection error: {e}")
         return None

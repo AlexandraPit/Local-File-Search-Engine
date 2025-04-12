@@ -1,136 +1,108 @@
 import os
-import psycopg2
+import mimetypes
+from datetime import time
+
 from db_utils import connect_to_db
 
-def crawl_and_index(root_dir, db_name, user, password, host, port):
-    """
-    Crawls the file system, extracts data, and indexes it in PostgreSQL.
-    Index all files, but only read content for .txt files.
-    Also updates entries if files are modified and deletes entries for files no longer in the folder.
+def is_text_file(file_path):
+    mime_type, _ = mimetypes.guess_type(file_path)
+    return mime_type is not None and mime_type.startswith("text")
 
-    Args:
-        root_dir (str): The directory to start crawling from.
-        db_name (str): The name of the PostgreSQL database.
-        user (str): PostgreSQL username.
-        password (str): PostgreSQL password.
-        host (str): PostgreSQL host.
-        port (str): PostgreSQL port.
-    """
+def read_text_file(file_path):
+    try:
+        with open(file_path, "r", encoding="utf-8", errors="ignore") as file:
+            return file.read()
+    except Exception:
+        return None
 
-    conn = connect_to_db(db_name, user, password, host, port)
-    if conn:
-        cursor = conn.cursor()
+def crawl_and_index(root_path, **db):
+    conn = connect_to_db(**db)
+    if not conn:
+        print("Failed to connect to database.")
+        return
 
-        try:
-            # Create the files table (if it doesn't exist)
-            cursor.execute("""
-                CREATE TABLE IF NOT EXISTS files (
-                    path TEXT PRIMARY KEY,
-                    name TEXT,
-                    extension TEXT,
-                    content TEXT,
-                    content_tsvector tsvector,
-                    last_modified TIMESTAMP
-                )
-            """)
+    with conn.cursor() as cur:
+        # Clear previous records
+        cur.execute("DELETE FROM files")
 
-            # Create the index (if it doesn't exist)
-            cursor.execute("""
-                CREATE INDEX IF NOT EXISTS idx_files_content_tsvector ON files USING GIN (content_tsvector);
-            """)
+        file_data = []
+        for dirpath, _, filenames in os.walk(root_path):
+            for filename in filenames:
+                full_path = os.path.join(dirpath, filename)
+                rel_path = os.path.relpath(full_path, root_path)
+                name = os.path.basename(full_path)
+                extension = os.path.splitext(full_path)[1].lower()
 
-            # Get a list of files currently in the database
-            cursor.execute("SELECT path FROM files")
-            indexed_files = set()  # Keep track of indexed files
+                # Read content only for text files, else set to None
+                content = read_text_file(full_path) if is_text_file(full_path) else None
 
-            # Crawl the file system
-            for root, _, files in os.walk(root_dir):
-                for file in files:
-                    file_path = os.path.join(root, file)
-                    try:
-                        # Filter to include all file types
-                        # Read content and preview only for .txt files
+                # Use empty string for content_tsvector if no content, otherwise pass the content
+                file_data.append((
+                    rel_path,
+                    name,
+                    extension,
+                    content,
+                    content if content else ""
+                ))
 
-                        extension = os.path.splitext(file)[1].lower() #mime-type
+        insert_query = """
+            INSERT INTO files (path, name, extension, content, content_tsvector)
+            VALUES (%s, %s, %s, %s, to_tsvector('english', %s))
+        """
+        cur.executemany(insert_query, file_data)
+        conn.commit()
 
-                        # Extract metadata
-                        name = os.path.splitext(file)[0]
-                        last_modified = os.path.getmtime(file_path)  # Unix timestamp
+    conn.close()
+    print("Indexing complete.")
 
-                        # Handle .txt files (read content and store)
-                        if extension == ".txt":
-                            with open(file_path, "r", encoding="utf-8") as f:
-                                content = f.read()
-                            cursor.execute("SELECT last_modified FROM files WHERE path = %s", (file_path,))
-                            result = cursor.fetchone()
+def calculate_file_score(self, file_data, query_terms):
+    score = 0
 
-                            if result:
-                                stored_modified_time = result[0]
-                                if stored_modified_time >= last_modified:
-                                    indexed_files.add(file_path)
-                                    continue  # No need to update
+    score -= len(file_data['path'])  # Longer paths lower the score
 
-                                # Update existing file
-                                cursor.execute(""" 
-                                    UPDATE files 
-                                    SET name=%s, extension=%s, content=%s, content_tsvector=to_tsvector('english', %s), last_modified=to_timestamp(%s)
-                                    WHERE path=%s
-                                """, (name, extension, content, content, last_modified, file_path))
-                            else:
-                                # Insert new file
-                                cursor.execute("""
-                                    INSERT INTO files (path, name, extension, content, content_tsvector, last_modified)
-                                    VALUES (%s, %s, %s, %s, to_tsvector('english', %s), to_timestamp(%s))
-                                """, (file_path, name, extension, content, content, last_modified))
+    if any(term in file_data['path'] for term in query_terms.get('path', [])):
+        score += 2  # Increase score if path contains search query
 
-                            indexed_files.add(file_path)
+    important_dirs = ["Documents", "Downloads"]
+    if any(dir in file_data['path'] for dir in important_dirs):
+        score += 3  # Increase score for important directories
 
-                        else:
-                            # For non-txt files, store metadata and set content_tsvector to NULL
-                            cursor.execute("SELECT last_modified FROM files WHERE path = %s", (file_path,))
-                            result = cursor.fetchone()
+    prioritized_extensions = [".txt", ".docx"]
+    if file_data['extension'] in prioritized_extensions:
+        score += 5  # Boost for certain extensions
 
-                            if result:
-                                stored_modified_time = result[0]
-                                if stored_modified_time >= last_modified:  # File hasn't changed, skip it
-                                    indexed_files.add(file_path)
-                                    continue  # No need to update
+    access_time = os.path.getatime(file_data['path'])
+    recent_access = time.time() - access_time < 3600 * 24  # Last 24 hours
+    if recent_access:
+        score += 3  # Boost score if file was accessed recently
 
-                                # Update existing non-txt file
-                                cursor.execute("""
-                                    UPDATE files 
-                                    SET name=%s, extension=%s, content=NULL, content_tsvector=NULL, last_modified=to_timestamp(%s)
-                                    WHERE path=%s
-                                """, (name, extension, last_modified, file_path))
-                            else:
-                                # Insert new non-txt file
-                                cursor.execute("""
-                                    INSERT INTO files (path, name, extension, content, content_tsvector, last_modified)
-                                    VALUES (%s, %s, %s, NULL, NULL, to_timestamp(%s))
-                                """, (file_path, name, extension, last_modified))
+    file_size = os.path.getsize(file_data['path'])
+    score -= file_size / 1000  # Penalize large files
 
-                            indexed_files.add(file_path)
+    return score
 
-                    except Exception as e:
-                        print(f"Error processing {file_path}: {e}")
+def find_matching_files(self, parsed_query):
+    query = "SELECT * FROM files WHERE "
+    conditions = []
 
-            # Delete removed files
-            cursor.execute("SELECT path FROM files")
-            stored_files = {row[0] for row in cursor.fetchall()}
-            deleted_files = stored_files - indexed_files  # Find files that no longer exist
+    # Check path query terms
+    if 'path' in parsed_query:
+        path_conditions = " OR ".join([f"path LIKE '%{term}%'" for term in parsed_query['path']])
+        conditions.append(f"({path_conditions})")
 
-            for file_path in deleted_files:
-                cursor.execute("DELETE FROM files WHERE path = %s", (file_path,))
-                print(f"File {file_path} deleted from the database.")
+    # Check content query terms
+    if 'content' in parsed_query:
+        content_conditions = " OR ".join([f"content LIKE '%{term}%'" for term in parsed_query['content']])
+        conditions.append(f"({content_conditions})")
 
-            conn.commit()
-            print("Indexing complete.")
+    query += " AND ".join(conditions)
 
-        except psycopg2.Error as e:
-            print(f"Database error: {e}")
+    # Execute the query on the DB
+    with self.db_cursor() as cur:
+        cur.execute(query)
+        return cur.fetchall()
 
-        finally:
-            cursor.close()
-            conn.close()
-    else:
-        print("Indexing failed: Could not connect to the database.")
+def db_cursor(self):
+    # Helper to get database connection and cursor
+    conn = connect_to_db(**self.db_params)
+    return conn.cursor() if conn else None

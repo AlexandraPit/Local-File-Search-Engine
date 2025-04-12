@@ -6,7 +6,6 @@ from worker import Worker, start_worker
 if __name__ == "__main__":
     multiprocessing.set_start_method("spawn")
 
-    # Example setup
     worker_configs = [
         ("D:/an3sem2/IP", 3001),
         ("D:/an3sem2/SD", 3002),
