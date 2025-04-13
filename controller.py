@@ -16,7 +16,9 @@ class Controller:
     def search(self, query):
         if not query.strip():
             return []
-        return search_files(query, **self.db)
+
+        parsed = self.parse_query(query)
+        return search_files(parsed, **self.db)
 
     def get_preview(self, path):
         if is_txt_file(path, **self.db):
@@ -30,42 +32,31 @@ class Controller:
             conn.close()
 
     def parse_query(self, query):
-        """
-        Parses the query string and returns a dictionary with qualifiers.
-        """
-        # Define regex pattern to capture 'path' and 'content' qualifiers.
         pattern = r'(path|content):([^\s]+)'
-
-        # Find all matches using regex
         matches = re.findall(pattern, query)
 
         query_dict = {}
 
-        # Process matches and add them to the dictionary
         for qualifier, value in matches:
-            # If the qualifier already exists, append the new value to the list.
             if qualifier in query_dict:
                 query_dict[qualifier].append(value)
             else:
                 query_dict[qualifier] = [value]
 
+        # If no qualifiers were found, assume general search => search by name and content
+        if not matches and query.strip():
+            query_dict['general'] = query.strip().split()
+
         return query_dict
 
     def process_query(self, query_dict):
-        """
-        Processes the parsed query dictionary to combine duplicate qualifiers
-        with 'AND' and prepare the query for searching.
-        """
         query_parts = []
-
-        # For each qualifier (path, content), combine values with 'AND'
         for qualifier, values in query_dict.items():
             if qualifier == "path":
                 query_parts.append(f"({' AND '.join(values)})")  # Combine path terms with AND
             elif qualifier == "content":
                 query_parts.append(f"({' AND '.join(values)})")  # Combine content terms with AND
 
-        # Join all parts with 'AND' to combine path and content conditions
         return " AND ".join(query_parts)
 
     def handle_query(self, query):
@@ -79,13 +70,10 @@ class Controller:
             print("No valid qualifiers found in query.")
             return
 
-        # Process duplicates by combining them with AND
         processed_query = self.process_query(parsed_query)
 
         print("Processed query:", processed_query)
 
-        # You can now proceed to run the query against your database or file system
-        # Example: Running a SQL query or filtering files
 
 
     def search_files(self, query):

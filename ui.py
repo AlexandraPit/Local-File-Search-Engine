@@ -55,9 +55,14 @@ class SearchApp:
             messagebox.showwarning("Indexing", "Please select a directory first.")
 
     def on_search_change(self, *args):
-        results = self.controller.search(self.search_var.get())
+        query = self.search_var.get()
+        results = self.controller.search(query)
+        self.update_results(results)
+
+    def update_results(self, results):
         self.results_listbox.delete(0, tk.END)
-        for path, _ in results:
+        for row in results:
+            path = row[0]
             self.results_listbox.insert(tk.END, path)
 
     def show_preview(self, event):

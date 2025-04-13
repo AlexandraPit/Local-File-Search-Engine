@@ -21,9 +21,8 @@ def crawl_and_index(root_path, **db):
         print("Failed to connect to database.")
         return
 
-    with conn.cursor() as cur:
-        # Clear previous records
-        cur.execute("DELETE FROM files")
+    with conn.cursor() as curr:
+        curr.execute("DELETE FROM files")
 
         file_data = []
         for dirpath, _, filenames in os.walk(root_path):
@@ -33,10 +32,7 @@ def crawl_and_index(root_path, **db):
                 name = os.path.basename(full_path)
                 extension = os.path.splitext(full_path)[1].lower()
 
-                # Read content only for text files, else set to None
                 content = read_text_file(full_path) if is_text_file(full_path) else None
-
-                # Use empty string for content_tsvector if no content, otherwise pass the content
                 file_data.append((
                     rel_path,
                     name,
@@ -49,7 +45,7 @@ def crawl_and_index(root_path, **db):
             INSERT INTO files (path, name, extension, content, content_tsvector)
             VALUES (%s, %s, %s, %s, to_tsvector('english', %s))
         """
-        cur.executemany(insert_query, file_data)
+        curr.executemany(insert_query, file_data)
         conn.commit()
 
     conn.close()
@@ -85,24 +81,20 @@ def find_matching_files(self, parsed_query):
     query = "SELECT * FROM files WHERE "
     conditions = []
 
-    # Check path query terms
     if 'path' in parsed_query:
         path_conditions = " OR ".join([f"path LIKE '%{term}%'" for term in parsed_query['path']])
         conditions.append(f"({path_conditions})")
 
-    # Check content query terms
     if 'content' in parsed_query:
         content_conditions = " OR ".join([f"content LIKE '%{term}%'" for term in parsed_query['content']])
         conditions.append(f"({content_conditions})")
 
     query += " AND ".join(conditions)
 
-    # Execute the query on the DB
-    with self.db_cursor() as cur:
-        cur.execute(query)
-        return cur.fetchall()
+    with self.db_cursor() as curr:
+        curr.execute(query)
+        return curr.fetchall()
 
 def db_cursor(self):
-    # Helper to get database connection and cursor
     conn = connect_to_db(**self.db_params)
     return conn.cursor() if conn else None
