@@ -3,7 +3,7 @@
   <database-model serializer="dbm" dbms="POSTGRES" family-id="POSTGRES" format-version="4.53">
     <root id="1">
       <DateStyle>dmy</DateStyle>
-      <IntrospectionStateNumber>1060</IntrospectionStateNumber>
+      <IntrospectionStateNumber>1132</IntrospectionStateNumber>
       <ServerVersion>17.0</ServerVersion>
       <StartupTime>1741946488</StartupTime>
       <TimeZones>true ACDT
@@ -298,9 +298,9 @@ false Asia/Dili
 false Asia/Dubai
 false Asia/Dushanbe
 true Asia/Famagusta
-false Asia/Gaza
+true Asia/Gaza
 false Asia/Harbin
-false Asia/Hebron
+true Asia/Hebron
 false Asia/Ho_Chi_Minh
 false Asia/Hong_Kong
 false Asia/Hovd
@@ -800,7 +800,7 @@ false Zulu
 14751||10|C|G
 14751||-9223372036854775808|U|G
 14751||10|U|G</Grants>
-      <IntrospectionStateNumber>1060</IntrospectionStateNumber>
+      <IntrospectionStateNumber>1132</IntrospectionStateNumber>
       <ObjectId>25104</ObjectId>
       <OwnerName>postgres</OwnerName>
     </database>
@@ -4231,8 +4231,8 @@ false Zulu
     <schema id="266" parent="2" name="public">
       <Comment>standard public schema</Comment>
       <Current>1</Current>
-      <IntrospectionStateNumber>1060</IntrospectionStateNumber>
-      <LastIntrospectionLocalTimestamp>2025-04-11.10:21:05</LastIntrospectionLocalTimestamp>
+      <IntrospectionStateNumber>1132</IntrospectionStateNumber>
+      <LastIntrospectionLocalTimestamp>2025-04-13.10:56:46</LastIntrospectionLocalTimestamp>
       <ObjectId>2200</ObjectId>
       <StateNumber>532</StateNumber>
       <OwnerName>pg_database_owner</OwnerName>
@@ -4247,7 +4247,7 @@ false Zulu
     </sequence>
     <table id="268" parent="266" name="files">
       <ObjectId>26005</ObjectId>
-      <StateNumber>1059</StateNumber>
+      <StateNumber>1131</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
@@ -4293,7 +4293,13 @@ false Zulu
       <StoredType>tsvector|0s</StoredType>
       <TypeId>3614</TypeId>
     </column>
-    <index id="275" parent="268" name="files_pkey">
+    <column id="275" parent="268" name="score">
+      <Position>7</Position>
+      <StateNumber>1131</StateNumber>
+      <StoredType>real|0s</StoredType>
+      <TypeId>700</TypeId>
+    </column>
+    <index id="276" parent="268" name="files_pkey">
       <ColNames>id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>26011</ObjectId>
@@ -4302,7 +4308,7 @@ false Zulu
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <key id="276" parent="268" name="files_pkey">
+    <key id="277" parent="268" name="files_pkey">
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>26012</ObjectId>
       <Primary>1</Primary>

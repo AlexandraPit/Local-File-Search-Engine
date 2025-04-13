@@ -40,6 +40,7 @@ def search_files(parsed_query, **db):
     query = "SELECT path, name, extension FROM files"
     if conditions:
         query += " WHERE " + " AND ".join(conditions)
+        query += " ORDER BY score DESC"
 
     with conn.cursor() as cur:
         cur.execute(query, params)

@@ -1,6 +1,6 @@
 import os
 import mimetypes
-from datetime import time
+from time import time as current_time
 
 from db_utils import connect_to_db
 
@@ -33,49 +33,60 @@ def crawl_and_index(root_path, **db):
                 extension = os.path.splitext(full_path)[1].lower()
 
                 content = read_text_file(full_path) if is_text_file(full_path) else None
+                score = calculate_file_score({
+                    'path': full_path,
+                    'extension': extension
+                })
+
                 file_data.append((
                     rel_path,
                     name,
                     extension,
                     content,
-                    content if content else ""
+                    content if content else "",
+                    score
                 ))
 
         insert_query = """
-            INSERT INTO files (path, name, extension, content, content_tsvector)
-            VALUES (%s, %s, %s, %s, to_tsvector('english', %s))
+            INSERT INTO files (path, name, extension, content, content_tsvector, score)
+            VALUES (%s, %s, %s, %s, to_tsvector('english', %s), %s)
         """
+
         curr.executemany(insert_query, file_data)
         conn.commit()
 
     conn.close()
     print("Indexing complete.")
 
-def calculate_file_score(self, file_data, query_terms):
+def calculate_file_score(file_data):
     score = 0
+    path = file_data['path']
+    extension = file_data['extension']
 
-    score -= len(file_data['path'])  # Longer paths lower the score
+    score -= len(path)
 
-    if any(term in file_data['path'] for term in query_terms.get('path', [])):
-        score += 2  # Increase score if path contains search query
-
-    important_dirs = ["Documents", "Downloads"]
-    if any(dir in file_data['path'] for dir in important_dirs):
-        score += 3  # Increase score for important directories
+    if "writing" in path:
+        score += 3
 
     prioritized_extensions = [".txt", ".docx"]
-    if file_data['extension'] in prioritized_extensions:
-        score += 5  # Boost for certain extensions
+    if extension in prioritized_extensions:
+        score += 5
 
-    access_time = os.path.getatime(file_data['path'])
-    recent_access = time.time() - access_time < 3600 * 24  # Last 24 hours
-    if recent_access:
-        score += 3  # Boost score if file was accessed recently
+    try:
+        access_time = os.path.getatime(path)
+        if current_time() - access_time < 3600 * 24:
+            score += 3
+    except:
+        pass
 
-    file_size = os.path.getsize(file_data['path'])
-    score -= file_size / 1000  # Penalize large files
+    try:
+        file_size = os.path.getsize(path)
+        score -= file_size / 1000
+    except:
+        pass
 
     return score
+
 
 def find_matching_files(self, parsed_query):
     query = "SELECT * FROM files WHERE "
