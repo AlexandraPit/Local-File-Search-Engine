@@ -4,11 +4,13 @@ from preview import get_file_preview, is_txt_file
 from database import clear_database
 from config import DB_CONFIG
 from db_utils import connect_to_db
+
 import re
 
 class Controller:
     def __init__(self):
         self.db = DB_CONFIG
+        self.observers = []
 
     def index_directory(self, path):
         crawl_and_index(path, **self.db)
@@ -17,8 +19,26 @@ class Controller:
         if not query.strip():
             return []
 
+        self.notify_observers(query)  # 🔔 Log query activity
+
         parsed = self.parse_query(query)
-        return search_files(parsed, **self.db)
+        raw_results = search_files(parsed, **self.db)
+
+        # Check if any observer provides frequent terms
+        frequent_terms = []
+        for observer in self.observers:
+            if hasattr(observer, "get_frequent_terms"):
+                frequent_terms = observer.get_frequent_terms()
+                break  # just get from the first logger-like observer
+
+        # Rank the results using the frequent terms
+        ranked_results = []
+        for file in raw_results:
+            score = self.calculate_file_score(file, frequent_terms)
+            ranked_results.append((file[0], score))  # file[0] = path
+
+        ranked_results.sort(key=lambda x: x[1], reverse=True)
+        return ranked_results
 
     def get_preview(self, path):
         if is_txt_file(path, **self.db):
@@ -87,4 +107,27 @@ class Controller:
 
         scored_files.sort(key=lambda x: x[1], reverse=True)  # Sort by score
         return scored_files
+
+
+    def register_observer(self, observer):
+        self.observers.append(observer)
+
+
+    def notify_observers(self, query):
+        for observer in self.observers:
+            observer.update(query)
+
+    def calculate_file_score(self, file_data, frequent_terms):
+        """
+        file_data is a tuple, with file_data[0] being the path.
+        Adds score if the file path contains frequent search terms.
+        """
+        path = file_data[0].lower()
+        score = 0
+
+        for term in frequent_terms:
+            if term in path:
+                score += 1  # you can tweak this weight
+
+        return score
 

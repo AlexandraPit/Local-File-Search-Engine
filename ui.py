@@ -1,13 +1,13 @@
 import tkinter as tk
 from tkinter import ttk, filedialog, messagebox
-from controller import Controller
 
 class SearchApp:
-    def __init__(self, root):
+    def __init__(self, root, controller, search_logger):
         self.root = root
         self.root.title("Local File Search")
 
-        self.controller = Controller()
+        self.controller = controller
+        self.search_logger = search_logger
 
         self.root_dir = ""
         self.create_widgets()
@@ -29,6 +29,10 @@ class SearchApp:
         self.search_var = tk.StringVar()
         self.search_entry = ttk.Entry(search_frame, textvariable=self.search_var, width=30)
         self.search_entry.grid(row=0, column=1)
+
+        self.suggestions_listbox = tk.Listbox(search_frame, height=3)
+        self.suggestions_listbox.grid(row=1, column=0, columnspan=2, sticky="ew", pady=(5, 0))
+        self.suggestions_listbox.bind("<<ListboxSelect>>", self.load_suggestion)
 
         results_frame = ttk.LabelFrame(self.root, text="Search Results", padding=(10, 5))
         results_frame.grid(row=2, column=0, padx=10, pady=5, sticky="ew")
@@ -55,20 +59,43 @@ class SearchApp:
             messagebox.showwarning("Indexing", "Please select a directory first.")
 
     def on_search_change(self, *args):
-        query = self.search_var.get()
-        results = self.controller.search(query)
-        self.update_results(results)
+        query = self.search_var.get().strip()
+
+        # Suggestions
+        self.suggestions_listbox.delete(0, tk.END)
+        if query:
+            suggestions = self.search_logger.get_suggestions(query)
+            for s in suggestions:
+                self.suggestions_listbox.insert(tk.END, s)
+
+        # Search and ranking
+        if query:
+            results = self.controller.search(query)
+            print("Raw search results:", results)
+
+            ranked = self.search_logger.rank_results(query, results)
+            self.update_results(ranked)
+            print("Ranked search results:", results)
+
+            # Notify observer
+            self.search_logger.update(query)
+
+    def load_suggestion(self, event):
+        selection = self.suggestions_listbox.curselection()
+        if selection:
+            suggestion = self.suggestions_listbox.get(selection[0])
+            self.search_var.set(suggestion)
 
     def update_results(self, results):
         self.results_listbox.delete(0, tk.END)
-        for row in results:
-            path = row[0]
-            self.results_listbox.insert(tk.END, path)
+        for path, score in results:
+            self.results_listbox.insert(tk.END, f"{path} (Score: {score})")
 
     def show_preview(self, event):
         selected_index = self.results_listbox.curselection()
         if selected_index:
-            file_path = self.results_listbox.get(selected_index)
+            file_entry = self.results_listbox.get(selected_index)
+            file_path = file_entry.split(" (Score:")[0]  # Strip off score part
             preview = self.controller.get_preview(file_path)
             self.preview_label.config(text=f"Preview: {preview}")
 

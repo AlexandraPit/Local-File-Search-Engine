@@ -4,12 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7b6a422e-d246-4037-88d2-e3f436233b8c" name="Changes" comment="feat(search): add searching by path and content qualifiers">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/2972a7fb-95a2-4aa9-929e-376c2530871c.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/2972a7fb-95a2-4aa9-929e-376c2530871c.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/2972a7fb-95a2-4aa9-929e-376c2530871c/storage_v2/_src_/database/filesystem.q1pFog/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/2972a7fb-95a2-4aa9-929e-376c2530871c/storage_v2/_src_/database/filesystem.q1pFog/schema/public.abK9xQ.meta" afterDir="false" />
+    <list default="true" id="7b6a422e-d246-4037-88d2-e3f436233b8c" name="Changes" comment="feat(ranking): add compute and rank by cost">
+      <change afterPath="$PROJECT_DIR$/Observer.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search_logger.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/config.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller.py" beforeDir="false" afterPath="$PROJECT_DIR$/controller.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/indexer.py" beforeDir="false" afterPath="$PROJECT_DIR$/indexer.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/searcher.py" beforeDir="false" afterPath="$PROJECT_DIR$/searcher.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ui.py" beforeDir="false" afterPath="$PROJECT_DIR$/ui.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -111,7 +114,7 @@
       <workItem from="1744461479764" duration="496000" />
       <workItem from="1744464074934" duration="971000" />
       <workItem from="1744465523315" duration="76000" />
-      <workItem from="1744465607916" duration="8967000" />
+      <workItem from="1744465607916" duration="16603000" />
     </task>
     <task id="LOCAL-00001" summary="feat(search): add searching by path and content qualifiers">
       <option name="closed" value="true" />
@@ -121,7 +124,15 @@
       <option name="project" value="LOCAL" />
       <updated>1744538386587</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="feat(ranking): add compute and rank by cost">
+      <option name="closed" value="true" />
+      <created>1744545298614</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1744545298614</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -146,14 +157,15 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="feat(search): add searching by path and content qualifiers" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat(search): add searching by path and content qualifiers" />
+    <MESSAGE value="feat(ranking): add compute and rank by cost" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat(ranking): add compute and rank by cost" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/assignment_file_search$main.coverage" NAME="main Coverage Results" MODIFIED="1744544628952" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/assignment_file_search$main.coverage" NAME="main Coverage Results" MODIFIED="1744561210984" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/assignment_file_search$db_utils.coverage" NAME="db_utils Coverage Results" MODIFIED="1742731927264" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/assignment_file_search$controller.coverage" NAME="controller Coverage Results" MODIFIED="1744469661138" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/assignment_file_search$indexer.coverage" NAME="indexer Coverage Results" MODIFIED="1742830703260" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/assignment_file_search$ui.coverage" NAME="ui Coverage Results" MODIFIED="1742831150751" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/assignment_file_search$indexer.coverage" NAME="indexer Coverage Results" MODIFIED="1744552452222" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/assignment_file_search$ui.coverage" NAME="ui Coverage Results" MODIFIED="1744560401875" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/assignment_file_search$searcher.coverage" NAME="searcher Coverage Results" MODIFIED="1744535361543" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/assignment_file_search$database.coverage" NAME="database Coverage Results" MODIFIED="1742748998269" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>

@@ -1,7 +1,11 @@
+import json
 import os
 import mimetypes
 from time import time as current_time
+from datetime import datetime
+from search_logger import SearchLogger
 
+import config
 from db_utils import connect_to_db
 
 def is_text_file(file_path):
@@ -23,6 +27,7 @@ def crawl_and_index(root_path, **db):
 
     with conn.cursor() as curr:
         curr.execute("DELETE FROM files")
+        errors=[]
 
         file_data = []
         for dirpath, _, filenames in os.walk(root_path):
@@ -32,11 +37,12 @@ def crawl_and_index(root_path, **db):
                 name = os.path.basename(full_path)
                 extension = os.path.splitext(full_path)[1].lower()
 
-                content = read_text_file(full_path) if is_text_file(full_path) else None
-                score = calculate_file_score({
-                    'path': full_path,
-                    'extension': extension
-                })
+                try:
+                    content = read_text_file(full_path) if is_text_file(full_path) else None
+                except Exception as e:
+                    errors.append(f"Failed to read {full_path}: {e}")
+                    content = None
+
 
                 file_data.append((
                     rel_path,
@@ -44,12 +50,12 @@ def crawl_and_index(root_path, **db):
                     extension,
                     content,
                     content if content else "",
-                    score
+
                 ))
 
         insert_query = """
-            INSERT INTO files (path, name, extension, content, content_tsvector, score)
-            VALUES (%s, %s, %s, %s, to_tsvector('english', %s), %s)
+            INSERT INTO files (path, name, extension, content, content_tsvector)
+                       VALUES (%s, %s, %s, %s, to_tsvector('english', %s))
         """
 
         curr.executemany(insert_query, file_data)
@@ -57,8 +63,9 @@ def crawl_and_index(root_path, **db):
 
     conn.close()
     print("Indexing complete.")
+    save_index_report(file_data, errors)
 
-def calculate_file_score(file_data):
+def calculate_file_score(file_data, frequent_terms):
     score = 0
     path = file_data['path']
     extension = file_data['extension']
@@ -67,6 +74,9 @@ def calculate_file_score(file_data):
 
     if "writing" in path:
         score += 3
+
+    if any(term in path for term in frequent_terms):
+        score += 2  # boost for matching popular query terms
 
     prioritized_extensions = [".txt", ".docx"]
     if extension in prioritized_extensions:
@@ -106,6 +116,38 @@ def find_matching_files(self, parsed_query):
         curr.execute(query)
         return curr.fetchall()
 
-def db_cursor(self):
-    conn = connect_to_db(**self.db_params)
-    return conn.cursor() if conn else None
+
+def save_index_report(file_data, errors=None):
+
+    timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    log_entries = [
+        f"Indexing started at {timestamp}",
+        f"Indexed {len(file_data)} files.",
+        f"Indexing complete at {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}"
+    ]
+
+    if errors:
+        log_entries.append("Errors during indexing:")
+        log_entries.extend(errors)
+
+    if config.REPORT_FORMAT == "json":
+        report_data = {
+            "log": log_entries,
+            "files": [
+                {"path": row[0], "name": row[1], "extension": row[2]} for row in file_data
+            ]
+        }
+        path = f"{config.REPORT_PATH}.json"
+        with open(path, "w", encoding="utf-8") as f:
+            json.dump(report_data, f, indent=2)
+        print(f"Index report saved as JSON to {path}")
+
+    elif config.REPORT_FORMAT == "text":
+        path = f"{config.REPORT_PATH}.txt"
+        with open(path, "w", encoding="utf-8") as f:
+            for entry in log_entries:
+                f.write(entry + "\n")
+            f.write("\nFiles indexed:\n")
+            for row in file_data:
+                f.write(f"- {row[0]} ({row[1]}, {row[2]})\n")
+        print(f"Index report saved as TXT to {path}")
