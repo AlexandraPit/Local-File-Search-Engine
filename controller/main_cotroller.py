@@ -23,8 +23,6 @@ class Controller:
         if not query.strip():
             return []
 
-        self.observer_manager.notify(query)
-
         parsed = self.parser.parse_query(query)
         raw_results = search_files(parsed, **self.db)
 

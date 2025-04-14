@@ -1,4 +1,3 @@
-# searching/searcher.py
 from database.db_utils import connect_to_db
 from searcher.query_builder import build_search_query
 

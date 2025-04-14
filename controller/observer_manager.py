@@ -5,10 +5,6 @@ class ObserverManager:
     def register(self, observer):
         self.observers.append(observer)
 
-    def notify(self, query):
-        for obs in self.observers:
-            obs.update(query)
-
     def get_frequent_terms(self):
         for obs in self.observers:
             if hasattr(obs, "get_frequent_terms"):

@@ -1,4 +1,3 @@
-# previewing/previewer.py
 from database.db_utils import connect_to_db
 
 def get_file_preview(file_path, **db):

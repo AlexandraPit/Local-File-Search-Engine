@@ -9,7 +9,6 @@ def crawl_and_index(root_path, **db):
         return
 
     with conn.cursor() as curr:
-        curr.execute("DELETE FROM files")
         file_data, errors = crawl_files(root_path)
 
         insert_query = """

@@ -16,11 +16,11 @@ def save_index_report(file_data, errors=None):
         log_entries.extend(errors)
 
     if report_setup.REPORT_FORMAT == "json":
-        _save_json_report(file_data, log_entries)
+        save_json_report(file_data, log_entries)
     elif report_setup.REPORT_FORMAT == "text":
-        _save_text_report(file_data, log_entries)
+        save_text_report(file_data, log_entries)
 
-def _save_json_report(file_data, log_entries):
+def save_json_report(file_data, log_entries):
     report_data = {
         "log": log_entries,
         "files": [
@@ -32,7 +32,7 @@ def _save_json_report(file_data, log_entries):
         json.dump(report_data, f, indent=2)
     print(f"Index report saved as JSON to {path}")
 
-def _save_text_report(file_data, log_entries):
+def save_text_report(file_data, log_entries):
     path = f"{report_setup.REPORT_PATH}.txt"
     with open(path, "w", encoding="utf-8") as f:
         for entry in log_entries:

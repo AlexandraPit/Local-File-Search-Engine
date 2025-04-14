@@ -1,5 +1,3 @@
-# searching/query_builder.py
-
 def build_search_query(parsed_query):
     conditions = []
     params = []

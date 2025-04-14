@@ -109,8 +109,7 @@ class SearchApp:
         self.path_score_map = {}  # Reset mapping
         for path, score in results:
             self.results_listbox.insert(tk.END, f"{path} (Score: {score})")
-            self.path_score_map[path] = (score)  # Store path-to-score mapping
-
+            self.path_score_map[path] = (score)
     def show_preview(self, event):
         selected_index = self.results_listbox.curselection()
         if selected_index:

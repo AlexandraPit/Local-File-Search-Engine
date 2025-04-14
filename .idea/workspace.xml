@@ -4,34 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7b6a422e-d246-4037-88d2-e3f436233b8c" name="Changes" comment="feat(ranking): add compute and rank by cost">
-      <change afterPath="$PROJECT_DIR$/controller/main_cotroller.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/controller/observer_manager.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/controller/query_parser.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/controller/scorer.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/config.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/maintain_db.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/schema.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/indexer/crawler.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/indexer/report.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/indexer/report_setup.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/previewer/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/previewer/file_type_checker.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/searcher/query_builder.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
+    <list default="true" id="7b6a422e-d246-4037-88d2-e3f436233b8c" name="Changes" comment="refactor: restructure project into packages for better modularity">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Observer.py" beforeDir="false" afterPath="$PROJECT_DIR$/searcher/Observer.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/db_utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/database/db_utils.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/indexer.py" beforeDir="false" afterPath="$PROJECT_DIR$/indexer/indexer.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/preview.py" beforeDir="false" afterPath="$PROJECT_DIR$/previewer/preview.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/search_logger.py" beforeDir="false" afterPath="$PROJECT_DIR$/searcher/search_logger.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/searcher.py" beforeDir="false" afterPath="$PROJECT_DIR$/searcher/searcher.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui.py" beforeDir="false" afterPath="$PROJECT_DIR$/ui/ui.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/main_cotroller.py" beforeDir="false" afterPath="$PROJECT_DIR$/controller/main_cotroller.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/observer_manager.py" beforeDir="false" afterPath="$PROJECT_DIR$/controller/observer_manager.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/scorer.py" beforeDir="false" afterPath="$PROJECT_DIR$/controller/scorer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/indexer/indexer.py" beforeDir="false" afterPath="$PROJECT_DIR$/indexer/indexer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/indexer/report.py" beforeDir="false" afterPath="$PROJECT_DIR$/indexer/report.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/previewer/preview.py" beforeDir="false" afterPath="$PROJECT_DIR$/previewer/preview.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/searcher/query_builder.py" beforeDir="false" afterPath="$PROJECT_DIR$/searcher/query_builder.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/searcher/searcher.py" beforeDir="false" afterPath="$PROJECT_DIR$/searcher/searcher.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ui/ui.py" beforeDir="false" afterPath="$PROJECT_DIR$/ui/ui.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -155,7 +138,15 @@
       <option name="project" value="LOCAL" />
       <updated>1744545298614</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="refactor: restructure project into packages for better modularity">
+      <option name="closed" value="true" />
+      <created>1744611518767</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1744611518767</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -181,10 +172,11 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="feat(search): add searching by path and content qualifiers" />
     <MESSAGE value="feat(ranking): add compute and rank by cost" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat(ranking): add compute and rank by cost" />
+    <MESSAGE value="refactor: restructure project into packages for better modularity" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor: restructure project into packages for better modularity" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/assignment_file_search$main.coverage" NAME="main Coverage Results" MODIFIED="1744611209873" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/assignment_file_search$main.coverage" NAME="main Coverage Results" MODIFIED="1744626251075" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/assignment_file_search$db_utils.coverage" NAME="db_utils Coverage Results" MODIFIED="1742731927264" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/assignment_file_search$controller.coverage" NAME="controller Coverage Results" MODIFIED="1744469661138" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/assignment_file_search$indexer.coverage" NAME="indexer Coverage Results" MODIFIED="1744552452222" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
