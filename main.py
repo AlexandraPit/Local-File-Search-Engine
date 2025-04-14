@@ -1,9 +1,9 @@
 import tkinter as tk
 
-from config import choose_report_format
-from controller import Controller
-from search_logger import SearchLogger
-from ui import SearchApp
+from controller.main_cotroller import Controller
+from indexer.report_setup import choose_report_format
+from searcher.search_logger import SearchLogger
+from ui.ui import SearchApp
 
 if __name__ == "__main__":
     choose_report_format()

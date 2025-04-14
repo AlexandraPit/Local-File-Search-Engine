@@ -1,26 +1,17 @@
-from db_utils import connect_to_db
+# searching/query_builder.py
 
-def search_files(parsed_query, **db):
-    conn = connect_to_db(**db)
-    if not conn:
-        return []
-
+def build_search_query(parsed_query):
     conditions = []
     params = []
 
     if 'path' in parsed_query:
         path_conditions = []
         for term in parsed_query['path']:
-            # Normalize slashes
             normalized = term.replace("\\", "/")
-
-            # Remove drive prefix if necessary
             if normalized.lower().startswith("d:/scoala/"):
                 normalized = normalized[len("d:/scoala/"):]
-
             path_conditions.append("path ILIKE %s")
             params.append(f"%{normalized}%")
-
         conditions.append("(" + " AND ".join(path_conditions) + ")")
 
     if 'content' in parsed_query:
@@ -40,11 +31,6 @@ def search_files(parsed_query, **db):
     query = "SELECT path, name, extension FROM files"
     if conditions:
         query += " WHERE " + " AND ".join(conditions)
-        query += " ORDER BY score DESC"
+        query += " ORDER BY score DESC"  # Optional: score must exist in view/index
 
-    with conn.cursor() as cur:
-        cur.execute(query, params)
-        results = cur.fetchall()
-
-    conn.close()
-    return results
+    return query, params

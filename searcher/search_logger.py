@@ -1,6 +1,6 @@
 from collections import Counter
 
-from Observer import Observer
+from searcher.Observer import Observer
 
 
 class SearchLogger(Observer):

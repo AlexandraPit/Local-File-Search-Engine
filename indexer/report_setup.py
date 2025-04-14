@@ -1,10 +1,3 @@
-DB_CONFIG = {
-    "dbname": "filesystem",
-    "user": "postgres",
-    "password": "parola789",
-    "host": "localhost",
-    "port": "5432"
-}
 REPORT_FORMAT = None
 REPORT_PATH = "index_report"
 def choose_report_format():

@@ -1,3 +1,4 @@
+# database/schema.py
 import psycopg2
 
 def setup_database(host, port, dbname, user, password):
@@ -11,7 +12,7 @@ def setup_database(host, port, dbname, user, password):
         )
         cur = conn.cursor()
 
-        cur.execute("""
+        create_table_sql = """
             CREATE TABLE IF NOT EXISTS files (
                 id SERIAL PRIMARY KEY,
                 path TEXT NOT NULL,
@@ -20,20 +21,22 @@ def setup_database(host, port, dbname, user, password):
                 content TEXT,
                 content_tsvector TSVECTOR
             );
-        """)
+        """
 
-        cur.execute("CREATE INDEX IF NOT EXISTS idx_content_tsvector ON files USING GIN(content_tsvector);")
+        create_index_sql = """
+            CREATE INDEX IF NOT EXISTS idx_content_tsvector 
+            ON files USING GIN(content_tsvector);
+        """
+
+        cur.execute(create_table_sql)
+        cur.execute(create_index_sql)
 
         conn.commit()
-        cur.close()
-        conn.close()
-        print("Database setup complete.")
+        print("Database schema created.")
+
     except psycopg2.Error as e:
         print(f"Error setting up database: {e}")
 
-def clear_database(conn):
-    with conn.cursor() as cur:
-        cur.execute("DELETE FROM files")
-        conn.commit()
-    print("Database cleared.")
-
+    finally:
+        if cur: cur.close()
+        if conn: conn.close()
