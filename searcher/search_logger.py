@@ -17,7 +17,6 @@ class SearchLogger(Observer):
     def get_frequent_terms(self, top_n=5):
         all_terms = []
         for query in self.history:
-            # Simple split, or use regex for better tokenizing
             terms = query.lower().split()
             all_terms.extend(terms)
 

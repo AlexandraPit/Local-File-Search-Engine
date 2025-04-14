@@ -1,14 +1,13 @@
-# previewing/file_type_checker.py
-from database.db_utils import connect_to_db
+import mimetypes
 
-def is_txt_file(file_path, **db):
-    conn = connect_to_db(**db)
-    if not conn:
-        return False
 
-    with conn.cursor() as cur:
-        cur.execute("SELECT extension FROM files WHERE path = %s", (file_path,))
-        result = cur.fetchone()
+def is_text_file(file_path):
+    mime_type, _ = mimetypes.guess_type(file_path)
+    return mime_type is not None and mime_type.startswith("text")
 
-    conn.close()
-    return result and result[0] == ".txt"
+def read_text_file(file_path):
+    try:
+        with open(file_path, "r", encoding="utf-8", errors="ignore") as file:
+            return file.read()
+    except Exception:
+        return None

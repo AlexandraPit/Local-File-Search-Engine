@@ -4,7 +4,7 @@ from controller.observer_manager import ObserverManager
 from indexer.indexer import crawl_and_index
 from searcher.searcher import search_files
 from previewer.preview import get_file_preview
-from previewer.file_type_checker import is_txt_file
+from previewer.file_type_checker import is_text_file
 from database.maintain_db import clear_database
 from database.config import DB_CONFIG
 from database.db_utils import connect_to_db
@@ -32,7 +32,7 @@ class Controller:
         return ranked_results
 
     def get_preview(self, path):
-        if is_txt_file(path, **self.db):
+        if is_text_file(path):
             return get_file_preview(path, **self.db)
         return "(No preview)"
 

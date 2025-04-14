@@ -1,5 +1,3 @@
-# database/maintenance.py
-
 def clear_database(conn):
     try:
         with conn.cursor() as cur:

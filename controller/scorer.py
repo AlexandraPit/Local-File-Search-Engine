@@ -11,8 +11,8 @@ class ScoreCalculator:
 
     def calculate_score(self, file_data, frequent_terms):
         score = 0
-        path = file_data[0]  # Assuming the path is the first element in file_data
-        extension = file_data[2]  # Assuming the extension is the third element in file_data
+        path = file_data[0]
+        extension = file_data[2]
 
         # Decrease score based on path length (longer paths have lower scores)
         score -= len(path)
@@ -30,20 +30,19 @@ class ScoreCalculator:
         if extension in prioritized_extensions:
             score += 5
 
-        # Check recent file access time (if it was accessed in the last 24 hours)
+        # Check recent file access time
         try:
             access_time = os.path.getatime(path)
             if (time() - access_time) < 3600 * 24:  # 24 hours
                 score += 3
         except:
-            pass  # If there's an issue getting the access time, continue without adding score
+            pass
 
         # Decrease score based on file size (larger files have lower scores)
         try:
             file_size = os.path.getsize(path)
-            score -= file_size / 1000  # Decrease score based on file size in KB
+            score -= file_size / 1000
         except:
-            pass  # If there's an issue getting the file size, continue without adding score
-
+            pass
         return score
 

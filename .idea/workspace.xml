@@ -4,8 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7b6a422e-d246-4037-88d2-e3f436233b8c" name="Changes" comment="refactor: remove unused code">
+    <list default="true" id="7b6a422e-d246-4037-88d2-e3f436233b8c" name="Changes" comment="refactor: move ranking in controller">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/main_cotroller.py" beforeDir="false" afterPath="$PROJECT_DIR$/controller/main_cotroller.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/scorer.py" beforeDir="false" afterPath="$PROJECT_DIR$/controller/scorer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/maintain_db.py" beforeDir="false" afterPath="$PROJECT_DIR$/database/maintain_db.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/schema.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/indexer/crawler.py" beforeDir="false" afterPath="$PROJECT_DIR$/indexer/crawler.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/previewer/file_type_checker.py" beforeDir="false" afterPath="$PROJECT_DIR$/previewer/file_type_checker.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/searcher/search_logger.py" beforeDir="false" afterPath="$PROJECT_DIR$/searcher/search_logger.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ui/ui.py" beforeDir="false" afterPath="$PROJECT_DIR$/ui/ui.py" afterDir="false" />
     </list>
@@ -147,7 +153,15 @@
       <option name="project" value="LOCAL" />
       <updated>1744635058652</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="refactor: move ranking in controller">
+      <option name="closed" value="true" />
+      <created>1744636301610</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1744636301610</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -175,10 +189,11 @@
     <MESSAGE value="feat(ranking): add compute and rank by cost" />
     <MESSAGE value="refactor: restructure project into packages for better modularity" />
     <MESSAGE value="refactor: remove unused code" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor: remove unused code" />
+    <MESSAGE value="refactor: move ranking in controller" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor: move ranking in controller" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/assignment_file_search$main.coverage" NAME="main Coverage Results" MODIFIED="1744626251075" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/assignment_file_search$main.coverage" NAME="main Coverage Results" MODIFIED="1744637230731" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/assignment_file_search$db_utils.coverage" NAME="db_utils Coverage Results" MODIFIED="1742731927264" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/assignment_file_search$controller.coverage" NAME="controller Coverage Results" MODIFIED="1744469661138" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/assignment_file_search$indexer.coverage" NAME="indexer Coverage Results" MODIFIED="1744552452222" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
