@@ -86,12 +86,8 @@ class SearchApp:
         if query:
             try:
                 results = self.controller.search(query)
-                print("Raw search results:", results)
-
-                # Rank the results
-                ranked = self.search_logger.rank_results(query, results)
-                self.update_results(ranked)
-                print("Ranked search results:", ranked)
+                self.update_results(results)
+                print("Ranked search results:", results)
 
                 # Notify observer
                 self.search_logger.update(query)

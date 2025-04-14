@@ -1,5 +1,5 @@
 from collections import Counter
-
+from controller.scorer import ScoreCalculator
 from searcher.Observer import Observer
 
 
@@ -24,14 +24,5 @@ class SearchLogger(Observer):
         counter = Counter(all_terms)
         return [term for term, _ in counter.most_common(top_n)]
 
-    def rank_results(self, query, results):
-        frequent_terms = self.get_frequent_terms()
 
-        def score(result):
-            path = result[0].lower()
-            hits = sum(term in path for term in frequent_terms)
-            return hits
-
-        ranked = sorted(results, key=score, reverse=True)
-        return ranked
 
