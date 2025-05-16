@@ -5,6 +5,8 @@ from tkinter import ttk, filedialog, messagebox
 LISTBOX_HEIGHT = 10
 LISTBOX_WIDTH = 50
 
+
+
 class SearchApp:
     def __init__(self, root, controller, search_logger):
         self.root = root
@@ -14,9 +16,18 @@ class SearchApp:
         self.search_logger = search_logger
 
         self.root_dir = ""
-        self.path_score_map = {}  # To map paths to their scores
+        self.path_score_map = {}
+
+        self.widget_frame = tk.Frame(self.root)
+        self.widget_frame.grid(row=3, column=0, padx=10, pady=10, sticky="ew")
+
         self.create_widgets()
         self.root.protocol("WM_DELETE_WINDOW", self.on_close)
+
+        self.widget_triggers = {
+            "calculator": self.show_calculator_widget,
+            "clock": self.show_clock_widget,
+        }
 
     def create_widgets(self):
         self.create_indexing_section()
@@ -94,11 +105,21 @@ class SearchApp:
             except Exception as e:
                 messagebox.showerror("Search Error", f"An error occurred while searching: {e}")
 
+        for widget in self.widget_frame.winfo_children():
+            widget.destroy()
+
+        query = self.search_var.get().strip().lower()
+
+        for keyword, widget_func in self.widget_triggers.items():
+            if keyword in query:
+                widget_func()
+                break
+
     def load_suggestion(self, event):
         selection = self.suggestions_listbox.curselection()
         if selection:
             suggestion = self.suggestions_listbox.get(selection[0])
-            self.search_var.set(suggestion)
+            self.search_var.set(suggestion) #nume mai bun
 
     def update_results(self, results):
         self.results_listbox.delete(0, tk.END)
@@ -117,3 +138,15 @@ class SearchApp:
     def on_close(self):
         self.controller.cleanup()
         self.root.destroy()
+
+    def show_calculator_widget(self):
+        label = tk.Label(self.widget_frame, text="Calculator Widget (Mockup)", font=("Arial", 12))
+        label.pack()
+
+    def show_clock_widget(self):
+        from time import strftime
+        label = tk.Label(self.widget_frame, text=f"🕒 Current time: {strftime('%H:%M:%S')}", font=("Arial", 12))
+        label.pack()
+
+
+
