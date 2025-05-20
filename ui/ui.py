@@ -1,9 +1,7 @@
 import tkinter as tk
 from tkinter import ttk, filedialog, messagebox
 
-from spelling_corrector.querry_correction_interface import NorvigSpellingCorrector, LoggingCorrectorDecorator
-
-from spelling_corrector.spelling_corrector import SpellingCorrector
+from spelling_corrector.facade import SpellingCorrectionFacade
 
 # Constants for UI sizes
 LISTBOX_HEIGHT = 10
@@ -13,12 +11,7 @@ LISTBOX_WIDTH = 50
 
 class SearchApp:
     def __init__(self, root, controller, search_logger):
-        with open("data/big.txt", "r", encoding="utf-8") as f:
-            corpus_text = f.read()
-
-        spelling_model = SpellingCorrector(corpus_text)
-        base_corrector = NorvigSpellingCorrector(spelling_model)
-        self.logging_corrector = LoggingCorrectorDecorator(base_corrector)
+        self.query_corrector = SpellingCorrectionFacade()
 
         self.root = root
         self.root.title("Local File Search")
@@ -96,7 +89,7 @@ class SearchApp:
 
     def on_search_change(self, *args):
         query = self.search_var.get().strip()
-        corrected_query = self.logging_corrector.correct(query)
+        corrected_query = self.query_corrector.correct(query)
         if corrected_query != query:
             print(f"Did you mean: {corrected_query}?")
 

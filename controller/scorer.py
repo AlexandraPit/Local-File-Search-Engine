@@ -33,7 +33,7 @@ class ScoreCalculator:
         # Check recent file access time
         try:
             access_time = os.path.getatime(path)
-            if (time() - access_time) < 3600 * 24:  # 24 hours
+            if (time() - access_time) < 3600 * 24:  # modified time
                 score += 3
         except:
             pass

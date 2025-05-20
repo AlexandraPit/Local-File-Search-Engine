@@ -29,6 +29,6 @@ def build_search_query(parsed_query):
     query = "SELECT path, name, extension FROM files"
     if conditions:
         query += " WHERE " + " AND ".join(conditions)
-        query += " ORDER BY score DESC"  # Optional: score must exist in view/index
+        query += " ORDER BY score DESC"
 
     return query, params
