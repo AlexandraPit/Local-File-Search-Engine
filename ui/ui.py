@@ -1,6 +1,10 @@
 import tkinter as tk
 from tkinter import ttk, filedialog, messagebox
 
+from spelling_corrector.querry_correction_interface import NorvigSpellingCorrector, LoggingCorrectorDecorator
+
+from spelling_corrector.spelling_corrector import SpellingCorrector
+
 # Constants for UI sizes
 LISTBOX_HEIGHT = 10
 LISTBOX_WIDTH = 50
@@ -9,6 +13,13 @@ LISTBOX_WIDTH = 50
 
 class SearchApp:
     def __init__(self, root, controller, search_logger):
+        with open("data/big.txt", "r", encoding="utf-8") as f:
+            corpus_text = f.read()
+
+        spelling_model = SpellingCorrector(corpus_text)
+        base_corrector = NorvigSpellingCorrector(spelling_model)
+        self.logging_corrector = LoggingCorrectorDecorator(base_corrector)
+
         self.root = root
         self.root.title("Local File Search")
 
@@ -85,33 +96,35 @@ class SearchApp:
 
     def on_search_change(self, *args):
         query = self.search_var.get().strip()
+        corrected_query = self.logging_corrector.correct(query)
+        if corrected_query != query:
+            print(f"Did you mean: {corrected_query}?")
 
         # Suggestions
         self.suggestions_listbox.delete(0, tk.END)
-        if query:
-            suggestions = self.search_logger.get_suggestions(query)
+        if corrected_query:
+            suggestions = self.search_logger.get_suggestions(corrected_query)
             for s in suggestions:
                 self.suggestions_listbox.insert(tk.END, s)
 
         # Search and ranking
-        if query:
+        if corrected_query:
             try:
-                results = self.controller.search(query)
+                results = self.controller.search(corrected_query)
                 self.update_results(results)
                 print("Ranked search results:", results)
 
                 # Notify observer
-                self.search_logger.update(query)
+                self.search_logger.update(corrected_query)
             except Exception as e:
                 messagebox.showerror("Search Error", f"An error occurred while searching: {e}")
 
         for widget in self.widget_frame.winfo_children():
             widget.destroy()
 
-        query = self.search_var.get().strip().lower()
 
         for keyword, widget_func in self.widget_triggers.items():
-            if keyword in query:
+            if keyword in corrected_query:
                 widget_func()
                 break
 
