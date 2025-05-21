@@ -2,6 +2,7 @@ import tkinter as tk
 from tkinter import ttk, filedialog, messagebox
 
 from spelling_corrector.facade import SpellingCorrectionFacade
+from widgets.widget_factory import WidgetFactory
 
 # Constants for UI sizes
 LISTBOX_HEIGHT = 10
@@ -11,6 +12,7 @@ LISTBOX_WIDTH = 50
 
 class SearchApp:
     def __init__(self, root, controller, search_logger):
+        self.widget_factory = WidgetFactory()
         self.query_corrector = SpellingCorrectionFacade()
 
         self.root = root
@@ -105,6 +107,7 @@ class SearchApp:
             try:
                 results = self.controller.search(corrected_query)
                 self.update_results(results)
+                self.show_context_widgets(results)
                 print("Ranked search results:", results)
 
                 # Notify observer
@@ -112,14 +115,13 @@ class SearchApp:
             except Exception as e:
                 messagebox.showerror("Search Error", f"An error occurred while searching: {e}")
 
-        for widget in self.widget_frame.winfo_children():
-            widget.destroy()
-
 
         for keyword, widget_func in self.widget_triggers.items():
             if keyword in corrected_query:
                 widget_func()
                 break
+
+
 
     def load_suggestion(self, event):
         selection = self.suggestions_listbox.curselection()
@@ -151,8 +153,15 @@ class SearchApp:
 
     def show_clock_widget(self):
         from time import strftime
-        label = tk.Label(self.widget_frame, text=f"🕒 Current time: {strftime('%H:%M:%S')}", font=("Arial", 12))
+        label = tk.Label(self.widget_frame, text=f"Current time: {strftime('%H:%M:%S')}", font=("Arial", 12))
         label.pack()
 
+    def show_context_widgets(self, results):
+        for child in self.widget_frame.winfo_children():
+            child.destroy()
 
+        widget_creators = self.widget_factory.get_widgets(results)
+
+        for create_widget in widget_creators:
+            create_widget(self.widget_frame)
 
