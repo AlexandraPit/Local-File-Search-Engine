@@ -30,11 +30,6 @@ class SearchApp:
         self.create_widgets()
         self.root.protocol("WM_DELETE_WINDOW", self.on_close)
 
-        self.widget_triggers = {
-            "calculator": self.show_calculator_widget,
-            "clock": self.show_clock_widget,
-        }
-
     def create_widgets(self):
         self.create_indexing_section()
         self.create_search_section()
@@ -107,7 +102,7 @@ class SearchApp:
             try:
                 results = self.controller.search(corrected_query)
                 self.update_results(results)
-                self.show_context_widgets(results)
+                self.show_context_widgets(results, corrected_query)
                 print("Ranked search results:", results)
 
                 # Notify observer
@@ -115,11 +110,6 @@ class SearchApp:
             except Exception as e:
                 messagebox.showerror("Search Error", f"An error occurred while searching: {e}")
 
-
-        for keyword, widget_func in self.widget_triggers.items():
-            if keyword in corrected_query:
-                widget_func()
-                break
 
 
 
@@ -147,20 +137,11 @@ class SearchApp:
         self.controller.cleanup()
         self.root.destroy()
 
-    def show_calculator_widget(self):
-        label = tk.Label(self.widget_frame, text="Calculator Widget (Mockup)", font=("Arial", 12))
-        label.pack()
-
-    def show_clock_widget(self):
-        from time import strftime
-        label = tk.Label(self.widget_frame, text=f"Current time: {strftime('%H:%M:%S')}", font=("Arial", 12))
-        label.pack()
-
-    def show_context_widgets(self, results):
+    def show_context_widgets(self, results, query):
         for child in self.widget_frame.winfo_children():
             child.destroy()
 
-        widget_creators = self.widget_factory.get_widgets(results)
+        widget_creators = self.widget_factory.get_widgets(results, query)
 
         for create_widget in widget_creators:
             create_widget(self.widget_frame)
