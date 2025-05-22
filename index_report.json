@@ -1,0 +1,2099 @@
+{
+  "log": [
+    "Indexing started at 2025-04-14 18:37:52",
+    "Indexed 418 files.",
+    "Indexing complete at 2025-04-14 18:37:52"
+  ],
+  "files": [
+    {
+      "path": "Analizatorul.docx",
+      "name": "Analizatorul.docx",
+      "extension": ".docx"
+    },
+    {
+      "path": "D\u00e9couvrir la France en deux jours.docx",
+      "name": "D\u00e9couvrir la France en deux jours.docx",
+      "extension": ".docx"
+    },
+    {
+      "path": "ma profession id\u00e9ale.docx",
+      "name": "ma profession id\u00e9ale.docx",
+      "extension": ".docx"
+    },
+    {
+      "path": "m\u00e9tiers insolites.pptx",
+      "name": "m\u00e9tiers insolites.pptx",
+      "extension": ".pptx"
+    },
+    {
+      "path": "Pitaru Alexandra-atestat engleza.docx",
+      "name": "Pitaru Alexandra-atestat engleza.docx",
+      "extension": ".docx"
+    },
+    {
+      "path": "Pitaru Alexandra-atestat info.docx",
+      "name": "Pitaru Alexandra-atestat info.docx",
+      "extension": ".docx"
+    },
+    {
+      "path": "Pitaru Alexandra1 (1).docx",
+      "name": "Pitaru Alexandra1 (1).docx",
+      "extension": ".docx"
+    },
+    {
+      "path": "Pitaru-Alexandra-SEATTLE.pptx",
+      "name": "Pitaru-Alexandra-SEATTLE.pptx",
+      "extension": ".pptx"
+    },
+    {
+      "path": "Premiere_Pro_Set-Up.exe",
+      "name": "Premiere_Pro_Set-Up.exe",
+      "extension": ".exe"
+    },
+    {
+      "path": "Proiect Cutremure.pptx",
+      "name": "Proiect Cutremure.pptx",
+      "extension": ".pptx"
+    },
+    {
+      "path": "Proiect-Istorie-UE.pptx",
+      "name": "Proiect-Istorie-UE.pptx",
+      "extension": ".pptx"
+    },
+    {
+      "path": "Simulari module ECDL.pdf",
+      "name": "Simulari module ECDL.pdf",
+      "extension": ".pdf"
+    },
+    {
+      "path": "Sinteze BAC fizica.docx",
+      "name": "Sinteze BAC fizica.docx",
+      "extension": ".docx"
+    },
+    {
+      "path": "TESTE-GRILA-DE-MATEMATICA-2020.pdf",
+      "name": "TESTE-GRILA-DE-MATEMATICA-2020.pdf",
+      "extension": ".pdf"
+    },
+    {
+      "path": "~$taru Alexandra-atestat info.docx",
+      "name": "~$taru Alexandra-atestat info.docx",
+      "extension": ".docx"
+    },
+    {
+      "path": "codeblock2\\bubblesort.c",
+      "name": "bubblesort.c",
+      "extension": ".c"
+    },
+    {
+      "path": "codeblock2\\Pitaru Alexandra.zip",
+      "name": "Pitaru Alexandra.zip",
+      "extension": ".zip"
+    },
+    {
+      "path": "codeblock2\\colocviu\\abc.dat",
+      "name": "abc.dat",
+      "extension": ".dat"
+    },
+    {
+      "path": "codeblock2\\colocviu\\colocviu.cbp",
+      "name": "colocviu.cbp",
+      "extension": ".cbp"
+    },
+    {
+      "path": "codeblock2\\colocviu\\colocviu.depend",
+      "name": "colocviu.depend",
+      "extension": ".depend"
+    },
+    {
+      "path": "codeblock2\\colocviu\\colocviu.layout",
+      "name": "colocviu.layout",
+      "extension": ".layout"
+    },
+    {
+      "path": "codeblock2\\colocviu\\input.txt",
+      "name": "input.txt",
+      "extension": ".txt"
+    },
+    {
+      "path": "codeblock2\\colocviu\\main.c",
+      "name": "main.c",
+      "extension": ".c"
+    },
+    {
+      "path": "codeblock2\\colocviu\\output",
+      "name": "output",
+      "extension": ""
+    },
+    {
+      "path": "codeblock2\\colocviu\\output.txt",
+      "name": "output.txt",
+      "extension": ".txt"
+    },
+    {
+      "path": "codeblock2\\colocviu\\bin\\Debug\\colocviu.exe",
+      "name": "colocviu.exe",
+      "extension": ".exe"
+    },
+    {
+      "path": "codeblock2\\colocviu\\obj\\Debug\\main.o",
+      "name": "main.o",
+      "extension": ".o"
+    },
+    {
+      "path": "codeblock2\\colocviu 12\\colocviu 12.cbp",
+      "name": "colocviu 12.cbp",
+      "extension": ".cbp"
+    },
+    {
+      "path": "codeblock2\\colocviu 12\\colocviu 12.layout",
+      "name": "colocviu 12.layout",
+      "extension": ".layout"
+    },
+    {
+      "path": "codeblock2\\colocviu 12\\main.c",
+      "name": "main.c",
+      "extension": ".c"
+    },
+    {
+      "path": "codeblock2\\ef\\abc.txt",
+      "name": "abc.txt",
+      "extension": ".txt"
+    },
+    {
+      "path": "codeblock2\\ef\\alocare dinamica vector.c",
+      "name": "alocare dinamica vector.c",
+      "extension": ".c"
+    },
+    {
+      "path": "codeblock2\\ef\\ef.cbp",
+      "name": "ef.cbp",
+      "extension": ".cbp"
+    },
+    {
+      "path": "codeblock2\\ef\\ef.depend",
+      "name": "ef.depend",
+      "extension": ".depend"
+    },
+    {
+      "path": "codeblock2\\ef\\ef.layout",
+      "name": "ef.layout",
+      "extension": ".layout"
+    },
+    {
+      "path": "codeblock2\\ef\\main.c",
+      "name": "main.c",
+      "extension": ".c"
+    },
+    {
+      "path": "codeblock2\\ef\\bin\\Debug\\ef.exe",
+      "name": "ef.exe",
+      "extension": ".exe"
+    },
+    {
+      "path": "codeblock2\\ef\\obj\\Debug\\main.o",
+      "name": "main.o",
+      "extension": ".o"
+    },
+    {
+      "path": "codeblock2\\efu\\efu.cbp",
+      "name": "efu.cbp",
+      "extension": ".cbp"
+    },
+    {
+      "path": "codeblock2\\efu\\efu.layout",
+      "name": "efu.layout",
+      "extension": ".layout"
+    },
+    {
+      "path": "codeblock2\\efu\\main.c",
+      "name": "main.c",
+      "extension": ".c"
+    },
+    {
+      "path": "codeblock2\\ex\\ex.cbp",
+      "name": "ex.cbp",
+      "extension": ".cbp"
+    },
+    {
+      "path": "codeblock2\\ex\\ex.depend",
+      "name": "ex.depend",
+      "extension": ".depend"
+    },
+    {
+      "path": "codeblock2\\ex\\ex.layout",
+      "name": "ex.layout",
+      "extension": ".layout"
+    },
+    {
+      "path": "codeblock2\\ex\\main.c",
+      "name": "main.c",
+      "extension": ".c"
+    },
+    {
+      "path": "codeblock2\\ex\\bin\\Debug\\ex.exe",
+      "name": "ex.exe",
+      "extension": ".exe"
+    },
+    {
+      "path": "codeblock2\\ex\\obj\\Debug\\main.o",
+      "name": "main.o",
+      "extension": ".o"
+    },
+    {
+      "path": "codeblock2\\exercitii\\abc.txt",
+      "name": "abc.txt",
+      "extension": ".txt"
+    },
+    {
+      "path": "codeblock2\\exercitii\\exercitii.cbp",
+      "name": "exercitii.cbp",
+      "extension": ".cbp"
+    },
+    {
+      "path": "codeblock2\\exercitii\\exercitii.depend",
+      "name": "exercitii.depend",
+      "extension": ".depend"
+    },
+    {
+      "path": "codeblock2\\exercitii\\main.c",
+      "name": "main.c",
+      "extension": ".c"
+    },
+    {
+      "path": "codeblock2\\exercitii\\output.txt",
+      "name": "output.txt",
+      "extension": ".txt"
+    },
+    {
+      "path": "codeblock2\\exercitii\\bin\\Debug\\exercitii.exe",
+      "name": "exercitii.exe",
+      "extension": ".exe"
+    },
+    {
+      "path": "codeblock2\\exercitii\\obj\\Debug\\main.o",
+      "name": "main.o",
+      "extension": ".o"
+    },
+    {
+      "path": "codeblock2\\fisiere binare\\fisiere binare.cbp",
+      "name": "fisiere binare.cbp",
+      "extension": ".cbp"
+    },
+    {
+      "path": "codeblock2\\fisiere binare\\fisiere binare.depend",
+      "name": "fisiere binare.depend",
+      "extension": ".depend"
+    },
+    {
+      "path": "codeblock2\\fisiere binare\\fisiere binare.layout",
+      "name": "fisiere binare.layout",
+      "extension": ".layout"
+    },
+    {
+      "path": "codeblock2\\fisiere binare\\main.c",
+      "name": "main.c",
+      "extension": ".c"
+    },
+    {
+      "path": "codeblock2\\fisiere binare\\bin\\Debug\\fisiere binare.exe",
+      "name": "fisiere binare.exe",
+      "extension": ".exe"
+    },
+    {
+      "path": "codeblock2\\fisiere binare\\obj\\Debug\\main.o",
+      "name": "main.o",
+      "extension": ".o"
+    },
+    {
+      "path": "codeblock2\\gf\\gf.cbp",
+      "name": "gf.cbp",
+      "extension": ".cbp"
+    },
+    {
+      "path": "codeblock2\\gf\\gf.depend",
+      "name": "gf.depend",
+      "extension": ".depend"
+    },
+    {
+      "path": "codeblock2\\gf\\gf.layout",
+      "name": "gf.layout",
+      "extension": ".layout"
+    },
+    {
+      "path": "codeblock2\\gf\\main.c",
+      "name": "main.c",
+      "extension": ".c"
+    },
+    {
+      "path": "codeblock2\\gf\\bin\\Debug\\gf.exe",
+      "name": "gf.exe",
+      "extension": ".exe"
+    },
+    {
+      "path": "codeblock2\\gf\\obj\\Debug\\main.o",
+      "name": "main.o",
+      "extension": ".o"
+    },
+    {
+      "path": "codeblock2\\hcf\\hcf.cbp",
+      "name": "hcf.cbp",
+      "extension": ".cbp"
+    },
+    {
+      "path": "codeblock2\\hcf\\hcf.depend",
+      "name": "hcf.depend",
+      "extension": ".depend"
+    },
+    {
+      "path": "codeblock2\\hcf\\hcf.layout",
+      "name": "hcf.layout",
+      "extension": ".layout"
+    },
+    {
+      "path": "codeblock2\\hcf\\main.c",
+      "name": "main.c",
+      "extension": ".c"
+    },
+    {
+      "path": "codeblock2\\hcf\\bin\\Debug\\hcf.exe",
+      "name": "hcf.exe",
+      "extension": ".exe"
+    },
+    {
+      "path": "codeblock2\\hcf\\obj\\Debug\\main.o",
+      "name": "main.o",
+      "extension": ".o"
+    },
+    {
+      "path": "codeblock2\\Lab4\\Lab4.cbp",
+      "name": "Lab4.cbp",
+      "extension": ".cbp"
+    },
+    {
+      "path": "codeblock2\\Lab4\\Lab4.depend",
+      "name": "Lab4.depend",
+      "extension": ".depend"
+    },
+    {
+      "path": "codeblock2\\Lab4\\Lab4.layout",
+      "name": "Lab4.layout",
+      "extension": ".layout"
+    },
+    {
+      "path": "codeblock2\\Lab4\\main.c",
+      "name": "main.c",
+      "extension": ".c"
+    },
+    {
+      "path": "codeblock2\\Lab4\\bin\\Debug\\Lab4.exe",
+      "name": "Lab4.exe",
+      "extension": ".exe"
+    },
+    {
+      "path": "codeblock2\\Lab4\\obj\\Debug\\main.o",
+      "name": "main.o",
+      "extension": ".o"
+    },
+    {
+      "path": "codeblock2\\lenght recursion\\lenghrec.c",
+      "name": "lenghrec.c",
+      "extension": ".c"
+    },
+    {
+      "path": "codeblock2\\lenght recursion\\lenght recursion.cbp",
+      "name": "lenght recursion.cbp",
+      "extension": ".cbp"
+    },
+    {
+      "path": "codeblock2\\lenght recursion\\lenght recursion.layout",
+      "name": "lenght recursion.layout",
+      "extension": ".layout"
+    },
+    {
+      "path": "codeblock2\\lenght recursion\\main.c",
+      "name": "main.c",
+      "extension": ".c"
+    },
+    {
+      "path": "codeblock2\\lenght recursion\\bin\\Debug\\lenght recursion.exe",
+      "name": "lenght recursion.exe",
+      "extension": ".exe"
+    },
+    {
+      "path": "codeblock2\\lenght recursion\\obj\\Debug\\main.o",
+      "name": "main.o",
+      "extension": ".o"
+    },
+    {
+      "path": "codeblock2\\matrice\\exer.cbp",
+      "name": "exer.cbp",
+      "extension": ".cbp"
+    },
+    {
+      "path": "codeblock2\\matrice\\exer.depend",
+      "name": "exer.depend",
+      "extension": ".depend"
+    },
+    {
+      "path": "codeblock2\\matrice\\exer.layout",
+      "name": "exer.layout",
+      "extension": ".layout"
+    },
+    {
+      "path": "codeblock2\\matrice\\main.c",
+      "name": "main.c",
+      "extension": ".c"
+    },
+    {
+      "path": "codeblock2\\matrice\\bin\\Debug\\exer.exe",
+      "name": "exer.exe",
+      "extension": ".exe"
+    },
+    {
+      "path": "codeblock2\\matrice\\obj\\Debug\\main.o",
+      "name": "main.o",
+      "extension": ".o"
+    },
+    {
+      "path": "codeblock2\\matrice diag\\main.c",
+      "name": "main.c",
+      "extension": ".c"
+    },
+    {
+      "path": "codeblock2\\matrice diag\\matrice diag.cbp",
+      "name": "matrice diag.cbp",
+      "extension": ".cbp"
+    },
+    {
+      "path": "codeblock2\\matrice diag\\matrice diag.depend",
+      "name": "matrice diag.depend",
+      "extension": ".depend"
+    },
+    {
+      "path": "codeblock2\\matrice diag\\matrice diag.layout",
+      "name": "matrice diag.layout",
+      "extension": ".layout"
+    },
+    {
+      "path": "codeblock2\\matrice diag\\bin\\Debug\\matrice diag.exe",
+      "name": "matrice diag.exe",
+      "extension": ".exe"
+    },
+    {
+      "path": "codeblock2\\matrice diag\\obj\\Debug\\main.o",
+      "name": "main.o",
+      "extension": ".o"
+    },
+    {
+      "path": "codeblock2\\menu\\main.c",
+      "name": "main.c",
+      "extension": ".c"
+    },
+    {
+      "path": "codeblock2\\menu\\menu.cbp",
+      "name": "menu.cbp",
+      "extension": ".cbp"
+    },
+    {
+      "path": "codeblock2\\menu\\menu.depend",
+      "name": "menu.depend",
+      "extension": ".depend"
+    },
+    {
+      "path": "codeblock2\\menu\\menu.layout",
+      "name": "menu.layout",
+      "extension": ".layout"
+    },
+    {
+      "path": "codeblock2\\menu\\bin\\Debug\\menu.exe",
+      "name": "menu.exe",
+      "extension": ".exe"
+    },
+    {
+      "path": "codeblock2\\menu\\obj\\Debug\\main.o",
+      "name": "main.o",
+      "extension": ".o"
+    },
+    {
+      "path": "codeblock2\\partitii\\main.c",
+      "name": "main.c",
+      "extension": ".c"
+    },
+    {
+      "path": "codeblock2\\partitii\\partitii.c",
+      "name": "partitii.c",
+      "extension": ".c"
+    },
+    {
+      "path": "codeblock2\\partitii\\partitii.cbp",
+      "name": "partitii.cbp",
+      "extension": ".cbp"
+    },
+    {
+      "path": "codeblock2\\partitii\\partitii.layout",
+      "name": "partitii.layout",
+      "extension": ".layout"
+    },
+    {
+      "path": "codeblock2\\partitii\\bin\\Debug\\partitii.exe",
+      "name": "partitii.exe",
+      "extension": ".exe"
+    },
+    {
+      "path": "codeblock2\\partitii\\obj\\Debug\\main.o",
+      "name": "main.o",
+      "extension": ".o"
+    },
+    {
+      "path": "codeblock2\\Pitaru Alexandra\\abc.dat",
+      "name": "abc.dat",
+      "extension": ".dat"
+    },
+    {
+      "path": "codeblock2\\Pitaru Alexandra\\input.txt",
+      "name": "input.txt",
+      "extension": ".txt"
+    },
+    {
+      "path": "codeblock2\\Pitaru Alexandra\\main.c",
+      "name": "main.c",
+      "extension": ".c"
+    },
+    {
+      "path": "codeblock2\\Pitaru Alexandra\\output.txt",
+      "name": "output.txt",
+      "extension": ".txt"
+    },
+    {
+      "path": "codeblock2\\Pitaru Alexandra\\Pitaru Alexandra.cbp",
+      "name": "Pitaru Alexandra.cbp",
+      "extension": ".cbp"
+    },
+    {
+      "path": "codeblock2\\Pitaru Alexandra\\Pitaru Alexandra.depend",
+      "name": "Pitaru Alexandra.depend",
+      "extension": ".depend"
+    },
+    {
+      "path": "codeblock2\\Pitaru Alexandra\\Pitaru Alexandra.layout",
+      "name": "Pitaru Alexandra.layout",
+      "extension": ".layout"
+    },
+    {
+      "path": "codeblock2\\Pitaru Alexandra\\bin\\Debug\\Pitaru Alexandra.exe",
+      "name": "Pitaru Alexandra.exe",
+      "extension": ".exe"
+    },
+    {
+      "path": "codeblock2\\Pitaru Alexandra\\obj\\Debug\\main.o",
+      "name": "main.o",
+      "extension": ".o"
+    },
+    {
+      "path": "codeblock2\\sf\\main.c",
+      "name": "main.c",
+      "extension": ".c"
+    },
+    {
+      "path": "codeblock2\\sf\\sf.cbp",
+      "name": "sf.cbp",
+      "extension": ".cbp"
+    },
+    {
+      "path": "codeblock2\\sf\\sf.depend",
+      "name": "sf.depend",
+      "extension": ".depend"
+    },
+    {
+      "path": "codeblock2\\sf\\sf.layout",
+      "name": "sf.layout",
+      "extension": ".layout"
+    },
+    {
+      "path": "codeblock2\\sf\\bin\\Debug\\sf.exe",
+      "name": "sf.exe",
+      "extension": ".exe"
+    },
+    {
+      "path": "codeblock2\\sf\\obj\\Debug\\main.o",
+      "name": "main.o",
+      "extension": ".o"
+    },
+    {
+      "path": "codeblock2\\struct\\main.c",
+      "name": "main.c",
+      "extension": ".c"
+    },
+    {
+      "path": "codeblock2\\struct\\struct.cbp",
+      "name": "struct.cbp",
+      "extension": ".cbp"
+    },
+    {
+      "path": "codeblock2\\struct\\struct.layout",
+      "name": "struct.layout",
+      "extension": ".layout"
+    },
+    {
+      "path": "codeblock2\\struct\\bin\\Debug\\struct.exe",
+      "name": "struct.exe",
+      "extension": ".exe"
+    },
+    {
+      "path": "codeblock2\\struct\\obj\\Debug\\main.o",
+      "name": "main.o",
+      "extension": ".o"
+    },
+    {
+      "path": "codeblock2\\vector\\exercitii.cbp",
+      "name": "exercitii.cbp",
+      "extension": ".cbp"
+    },
+    {
+      "path": "codeblock2\\vector\\exercitii.depend",
+      "name": "exercitii.depend",
+      "extension": ".depend"
+    },
+    {
+      "path": "codeblock2\\vector\\main.c",
+      "name": "main.c",
+      "extension": ".c"
+    },
+    {
+      "path": "codeblock2\\vector\\bin\\Debug\\exercitii.exe",
+      "name": "exercitii.exe",
+      "extension": ".exe"
+    },
+    {
+      "path": "codeblock2\\vector\\obj\\Debug\\main.o",
+      "name": "main.o",
+      "extension": ".o"
+    },
+    {
+      "path": "codeblock2\\X28jan\\main.c",
+      "name": "main.c",
+      "extension": ".c"
+    },
+    {
+      "path": "codeblock2\\X28jan\\s.cbp",
+      "name": "s.cbp",
+      "extension": ".cbp"
+    },
+    {
+      "path": "codeblock2\\X28jan\\s.depend",
+      "name": "s.depend",
+      "extension": ".depend"
+    },
+    {
+      "path": "codeblock2\\X28jan\\subarr.txt",
+      "name": "subarr.txt",
+      "extension": ".txt"
+    },
+    {
+      "path": "codeblock2\\X28jan\\bin\\Debug\\s.exe",
+      "name": "s.exe",
+      "extension": ".exe"
+    },
+    {
+      "path": "codeblock2\\X28jan\\obj\\Debug\\main.o",
+      "name": "main.o",
+      "extension": ".o"
+    },
+    {
+      "path": "codeblock2\\x28jan pb 2\\array.txt",
+      "name": "array.txt",
+      "extension": ".txt"
+    },
+    {
+      "path": "codeblock2\\x28jan pb 2\\main.c",
+      "name": "main.c",
+      "extension": ".c"
+    },
+    {
+      "path": "codeblock2\\x28jan pb 2\\x28jan pb 2.cbp",
+      "name": "x28jan pb 2.cbp",
+      "extension": ".cbp"
+    },
+    {
+      "path": "codeblock2\\x28jan pb 2\\x28jan pb 2.depend",
+      "name": "x28jan pb 2.depend",
+      "extension": ".depend"
+    },
+    {
+      "path": "codeblock2\\x28jan pb 2\\x28jan pb 2.layout",
+      "name": "x28jan pb 2.layout",
+      "extension": ".layout"
+    },
+    {
+      "path": "codeblock2\\x28jan pb 2\\bin\\Debug\\x28jan pb 2.exe",
+      "name": "x28jan pb 2.exe",
+      "extension": ".exe"
+    },
+    {
+      "path": "codeblock2\\x28jan pb 2\\obj\\Debug\\main.o",
+      "name": "main.o",
+      "extension": ".o"
+    },
+    {
+      "path": "CodeBlocks\\eficienta\\8\\8.cbp",
+      "name": "8.cbp",
+      "extension": ".cbp"
+    },
+    {
+      "path": "CodeBlocks\\eficienta\\8\\8.layout",
+      "name": "8.layout",
+      "extension": ".layout"
+    },
+    {
+      "path": "CodeBlocks\\eficienta\\8\\main.cpp",
+      "name": "main.cpp",
+      "extension": ".cpp"
+    },
+    {
+      "path": "CodeBlocks\\grafuri\\p8\\f17\\ex1\\main.cpp",
+      "name": "main.cpp",
+      "extension": ".cpp"
+    },
+    {
+      "path": "CodeBlocks\\grafuri\\p8\\f17\\ex1\\p8.cbp",
+      "name": "p8.cbp",
+      "extension": ".cbp"
+    },
+    {
+      "path": "CodeBlocks\\grafuri\\p8\\f17\\ex1\\p8.layout",
+      "name": "p8.layout",
+      "extension": ".layout"
+    },
+    {
+      "path": "CodeBlocks\\grafuri\\pg4\\p2\\f11\\main.cpp",
+      "name": "main.cpp",
+      "extension": ".cpp"
+    },
+    {
+      "path": "CodeBlocks\\grafuri\\pg4\\p2\\f11\\pg4.cbp",
+      "name": "pg4.cbp",
+      "extension": ".cbp"
+    },
+    {
+      "path": "CodeBlocks\\grafuri\\pg4\\p2\\f11\\pg4.layout",
+      "name": "pg4.layout",
+      "extension": ".layout"
+    },
+    {
+      "path": "CodeBlocks\\grafuri\\pg4\\p2\\f11\\bin\\Debug\\p2\\f11\\pg4.exe",
+      "name": "pg4.exe",
+      "extension": ".exe"
+    },
+    {
+      "path": "CodeBlocks\\grafuri\\pg4\\p2\\f11\\obj\\Debug\\grafuri\\pg4\\p2\\f11\\main.o",
+      "name": "main.o",
+      "extension": ".o"
+    },
+    {
+      "path": "CodeBlocks\\lab12\\lab12.cbp",
+      "name": "lab12.cbp",
+      "extension": ".cbp"
+    },
+    {
+      "path": "CodeBlocks\\lab12\\lab12.depend",
+      "name": "lab12.depend",
+      "extension": ".depend"
+    },
+    {
+      "path": "CodeBlocks\\lab12\\lab12.layout",
+      "name": "lab12.layout",
+      "extension": ".layout"
+    },
+    {
+      "path": "CodeBlocks\\lab12\\main.c",
+      "name": "main.c",
+      "extension": ".c"
+    },
+    {
+      "path": "CodeBlocks\\lab12\\bin\\Debug\\lab12.exe",
+      "name": "lab12.exe",
+      "extension": ".exe"
+    },
+    {
+      "path": "CodeBlocks\\lab12\\obj\\Debug\\main.o",
+      "name": "main.o",
+      "extension": ".o"
+    },
+    {
+      "path": "CodeBlocks\\lab12.2\\1\\1.cbp",
+      "name": "1.cbp",
+      "extension": ".cbp"
+    },
+    {
+      "path": "CodeBlocks\\lab12.2\\1\\1.depend",
+      "name": "1.depend",
+      "extension": ".depend"
+    },
+    {
+      "path": "CodeBlocks\\lab12.2\\1\\1.layout",
+      "name": "1.layout",
+      "extension": ".layout"
+    },
+    {
+      "path": "CodeBlocks\\lab12.2\\1\\main.c",
+      "name": "main.c",
+      "extension": ".c"
+    },
+    {
+      "path": "CodeBlocks\\lab12.2\\1\\bin\\Debug\\1.exe",
+      "name": "1.exe",
+      "extension": ".exe"
+    },
+    {
+      "path": "CodeBlocks\\lab12.2\\1\\obj\\Debug\\main.o",
+      "name": "main.o",
+      "extension": ".o"
+    },
+    {
+      "path": "CodeBlocks\\lab2\\lab2.cbp",
+      "name": "lab2.cbp",
+      "extension": ".cbp"
+    },
+    {
+      "path": "CodeBlocks\\lab2\\lab2.depend",
+      "name": "lab2.depend",
+      "extension": ".depend"
+    },
+    {
+      "path": "CodeBlocks\\lab2\\lab2.layout",
+      "name": "lab2.layout",
+      "extension": ".layout"
+    },
+    {
+      "path": "CodeBlocks\\lab2\\main.c",
+      "name": "main.c",
+      "extension": ".c"
+    },
+    {
+      "path": "CodeBlocks\\lab2\\bin\\Debug\\lab2.exe",
+      "name": "lab2.exe",
+      "extension": ".exe"
+    },
+    {
+      "path": "CodeBlocks\\lab2\\obj\\Debug\\main.o",
+      "name": "main.o",
+      "extension": ".o"
+    },
+    {
+      "path": "CodeBlocks\\matrice diag\\21\\21.cbp",
+      "name": "21.cbp",
+      "extension": ".cbp"
+    },
+    {
+      "path": "CodeBlocks\\matrice diag\\21\\21.depend",
+      "name": "21.depend",
+      "extension": ".depend"
+    },
+    {
+      "path": "CodeBlocks\\matrice diag\\21\\21.layout",
+      "name": "21.layout",
+      "extension": ".layout"
+    },
+    {
+      "path": "CodeBlocks\\matrice diag\\21\\main.cpp",
+      "name": "main.cpp",
+      "extension": ".cpp"
+    },
+    {
+      "path": "CodeBlocks\\matrice diag\\21\\bin\\Debug\\21.exe",
+      "name": "21.exe",
+      "extension": ".exe"
+    },
+    {
+      "path": "CodeBlocks\\matrice diag\\21\\obj\\Debug\\main.o",
+      "name": "main.o",
+      "extension": ".o"
+    },
+    {
+      "path": "CodeBlocks\\matrice diag\\24\\24.cbp",
+      "name": "24.cbp",
+      "extension": ".cbp"
+    },
+    {
+      "path": "CodeBlocks\\matrice diag\\24\\24.layout",
+      "name": "24.layout",
+      "extension": ".layout"
+    },
+    {
+      "path": "CodeBlocks\\matrice diag\\24\\main.cpp",
+      "name": "main.cpp",
+      "extension": ".cpp"
+    },
+    {
+      "path": "CodeBlocks\\matrice diag\\24\\bin\\Debug\\24.exe",
+      "name": "24.exe",
+      "extension": ".exe"
+    },
+    {
+      "path": "CodeBlocks\\matrice diag\\24\\obj\\Debug\\main.o",
+      "name": "main.o",
+      "extension": ".o"
+    },
+    {
+      "path": "CodeBlocks\\matrice diag\\244\\244.cbp",
+      "name": "244.cbp",
+      "extension": ".cbp"
+    },
+    {
+      "path": "CodeBlocks\\matrice diag\\244\\244.depend",
+      "name": "244.depend",
+      "extension": ".depend"
+    },
+    {
+      "path": "CodeBlocks\\matrice diag\\244\\244.layout",
+      "name": "244.layout",
+      "extension": ".layout"
+    },
+    {
+      "path": "CodeBlocks\\matrice diag\\244\\main.cpp",
+      "name": "main.cpp",
+      "extension": ".cpp"
+    },
+    {
+      "path": "CodeBlocks\\matrice diag\\244\\bin\\Debug\\244.exe",
+      "name": "244.exe",
+      "extension": ".exe"
+    },
+    {
+      "path": "CodeBlocks\\matrice diag\\244\\obj\\Debug\\main.o",
+      "name": "main.o",
+      "extension": ".o"
+    },
+    {
+      "path": "CodeBlocks\\matrice diag\\25\\25.cbp",
+      "name": "25.cbp",
+      "extension": ".cbp"
+    },
+    {
+      "path": "CodeBlocks\\matrice diag\\25\\25.layout",
+      "name": "25.layout",
+      "extension": ".layout"
+    },
+    {
+      "path": "CodeBlocks\\matrice diag\\25\\main.cpp",
+      "name": "main.cpp",
+      "extension": ".cpp"
+    },
+    {
+      "path": "CodeBlocks\\matrice diag\\38\\38.cbp",
+      "name": "38.cbp",
+      "extension": ".cbp"
+    },
+    {
+      "path": "CodeBlocks\\matrice diag\\38\\38.depend",
+      "name": "38.depend",
+      "extension": ".depend"
+    },
+    {
+      "path": "CodeBlocks\\matrice diag\\38\\38.layout",
+      "name": "38.layout",
+      "extension": ".layout"
+    },
+    {
+      "path": "CodeBlocks\\matrice diag\\38\\main.cpp",
+      "name": "main.cpp",
+      "extension": ".cpp"
+    },
+    {
+      "path": "CodeBlocks\\matrice diag\\38\\bin\\Debug\\38.exe",
+      "name": "38.exe",
+      "extension": ".exe"
+    },
+    {
+      "path": "CodeBlocks\\matrice diag\\38\\obj\\Debug\\main.o",
+      "name": "main.o",
+      "extension": ".o"
+    },
+    {
+      "path": "CodeBlocks\\recursivitate\\11\\11.cbp",
+      "name": "11.cbp",
+      "extension": ".cbp"
+    },
+    {
+      "path": "CodeBlocks\\recursivitate\\11\\11.layout",
+      "name": "11.layout",
+      "extension": ".layout"
+    },
+    {
+      "path": "CodeBlocks\\recursivitate\\11\\main.cpp",
+      "name": "main.cpp",
+      "extension": ".cpp"
+    },
+    {
+      "path": "CodeBlocks\\recursivitate\\11\\bin\\Debug\\11.exe",
+      "name": "11.exe",
+      "extension": ".exe"
+    },
+    {
+      "path": "CodeBlocks\\recursivitate\\11\\obj\\Debug\\main.o",
+      "name": "main.o",
+      "extension": ".o"
+    },
+    {
+      "path": "CodeBlocks\\recursivitate\\14\\14.cbp",
+      "name": "14.cbp",
+      "extension": ".cbp"
+    },
+    {
+      "path": "CodeBlocks\\recursivitate\\14\\14.depend",
+      "name": "14.depend",
+      "extension": ".depend"
+    },
+    {
+      "path": "CodeBlocks\\recursivitate\\14\\14.layout",
+      "name": "14.layout",
+      "extension": ".layout"
+    },
+    {
+      "path": "CodeBlocks\\recursivitate\\14\\main.cpp",
+      "name": "main.cpp",
+      "extension": ".cpp"
+    },
+    {
+      "path": "CodeBlocks\\recursivitate\\14\\bin\\Debug\\14.exe",
+      "name": "14.exe",
+      "extension": ".exe"
+    },
+    {
+      "path": "CodeBlocks\\recursivitate\\14\\obj\\Debug\\main.o",
+      "name": "main.o",
+      "extension": ".o"
+    },
+    {
+      "path": "CodeBlocks\\recursivitate\\15\\15.cbp",
+      "name": "15.cbp",
+      "extension": ".cbp"
+    },
+    {
+      "path": "CodeBlocks\\recursivitate\\15\\15.depend",
+      "name": "15.depend",
+      "extension": ".depend"
+    },
+    {
+      "path": "CodeBlocks\\recursivitate\\15\\15.layout",
+      "name": "15.layout",
+      "extension": ".layout"
+    },
+    {
+      "path": "CodeBlocks\\recursivitate\\15\\main.cpp",
+      "name": "main.cpp",
+      "extension": ".cpp"
+    },
+    {
+      "path": "CodeBlocks\\recursivitate\\15\\bin\\Debug\\15.exe",
+      "name": "15.exe",
+      "extension": ".exe"
+    },
+    {
+      "path": "CodeBlocks\\recursivitate\\15\\obj\\Debug\\main.o",
+      "name": "main.o",
+      "extension": ".o"
+    },
+    {
+      "path": "CodeBlocks\\recursivitate\\16\\16.cbp",
+      "name": "16.cbp",
+      "extension": ".cbp"
+    },
+    {
+      "path": "CodeBlocks\\recursivitate\\16\\16.depend",
+      "name": "16.depend",
+      "extension": ".depend"
+    },
+    {
+      "path": "CodeBlocks\\recursivitate\\16\\16.layout",
+      "name": "16.layout",
+      "extension": ".layout"
+    },
+    {
+      "path": "CodeBlocks\\recursivitate\\16\\main.cpp",
+      "name": "main.cpp",
+      "extension": ".cpp"
+    },
+    {
+      "path": "CodeBlocks\\recursivitate\\16\\bin\\Debug\\16.exe",
+      "name": "16.exe",
+      "extension": ".exe"
+    },
+    {
+      "path": "CodeBlocks\\recursivitate\\16\\obj\\Debug\\main.o",
+      "name": "main.o",
+      "extension": ".o"
+    },
+    {
+      "path": "CodeBlocks\\recursivitate\\17\\17.cbp",
+      "name": "17.cbp",
+      "extension": ".cbp"
+    },
+    {
+      "path": "CodeBlocks\\recursivitate\\17\\17.depend",
+      "name": "17.depend",
+      "extension": ".depend"
+    },
+    {
+      "path": "CodeBlocks\\recursivitate\\17\\17.layout",
+      "name": "17.layout",
+      "extension": ".layout"
+    },
+    {
+      "path": "CodeBlocks\\recursivitate\\17\\main.cpp",
+      "name": "main.cpp",
+      "extension": ".cpp"
+    },
+    {
+      "path": "CodeBlocks\\recursivitate\\17\\bin\\Debug\\17.exe",
+      "name": "17.exe",
+      "extension": ".exe"
+    },
+    {
+      "path": "CodeBlocks\\recursivitate\\17\\obj\\Debug\\main.o",
+      "name": "main.o",
+      "extension": ".o"
+    },
+    {
+      "path": "CodeBlocks\\recursivitate\\20\\20.cbp",
+      "name": "20.cbp",
+      "extension": ".cbp"
+    },
+    {
+      "path": "CodeBlocks\\recursivitate\\20\\20.layout",
+      "name": "20.layout",
+      "extension": ".layout"
+    },
+    {
+      "path": "CodeBlocks\\recursivitate\\20\\main.cpp",
+      "name": "main.cpp",
+      "extension": ".cpp"
+    },
+    {
+      "path": "CodeBlocks\\recursivitate\\8\\jhyg.cbp",
+      "name": "jhyg.cbp",
+      "extension": ".cbp"
+    },
+    {
+      "path": "CodeBlocks\\recursivitate\\8\\jhyg.depend",
+      "name": "jhyg.depend",
+      "extension": ".depend"
+    },
+    {
+      "path": "CodeBlocks\\recursivitate\\8\\main.cpp",
+      "name": "main.cpp",
+      "extension": ".cpp"
+    },
+    {
+      "path": "CodeBlocks\\recursivitate\\8\\bin\\Debug\\jhyg.exe",
+      "name": "jhyg.exe",
+      "extension": ".exe"
+    },
+    {
+      "path": "CodeBlocks\\recursivitate\\8\\obj\\Debug\\main.o",
+      "name": "main.o",
+      "extension": ".o"
+    },
+    {
+      "path": "CodeBlocks\\recursivitate\\9\\9.cbp",
+      "name": "9.cbp",
+      "extension": ".cbp"
+    },
+    {
+      "path": "CodeBlocks\\recursivitate\\9\\9.depend",
+      "name": "9.depend",
+      "extension": ".depend"
+    },
+    {
+      "path": "CodeBlocks\\recursivitate\\9\\9.layout",
+      "name": "9.layout",
+      "extension": ".layout"
+    },
+    {
+      "path": "CodeBlocks\\recursivitate\\9\\main.cpp",
+      "name": "main.cpp",
+      "extension": ".cpp"
+    },
+    {
+      "path": "CodeBlocks\\recursivitate\\9\\bin\\Debug\\9.exe",
+      "name": "9.exe",
+      "extension": ".exe"
+    },
+    {
+      "path": "CodeBlocks\\recursivitate\\9\\obj\\Debug\\main.o",
+      "name": "main.o",
+      "extension": ".o"
+    },
+    {
+      "path": "CodeBlocks\\siruri de caractere\\p10\\main.cpp",
+      "name": "main.cpp",
+      "extension": ".cpp"
+    },
+    {
+      "path": "CodeBlocks\\siruri de caractere\\p10\\p10.cbp",
+      "name": "p10.cbp",
+      "extension": ".cbp"
+    },
+    {
+      "path": "CodeBlocks\\siruri de caractere\\p10\\p10.depend",
+      "name": "p10.depend",
+      "extension": ".depend"
+    },
+    {
+      "path": "CodeBlocks\\siruri de caractere\\p10\\p10.layout",
+      "name": "p10.layout",
+      "extension": ".layout"
+    },
+    {
+      "path": "CodeBlocks\\siruri de caractere\\p10\\bin\\Debug\\p10.exe",
+      "name": "p10.exe",
+      "extension": ".exe"
+    },
+    {
+      "path": "CodeBlocks\\siruri de caractere\\p10\\obj\\Debug\\main.o",
+      "name": "main.o",
+      "extension": ".o"
+    },
+    {
+      "path": "CodeBlocks\\siruri de caractere\\p11\\main.cpp",
+      "name": "main.cpp",
+      "extension": ".cpp"
+    },
+    {
+      "path": "CodeBlocks\\siruri de caractere\\p11\\pg5.cbp",
+      "name": "pg5.cbp",
+      "extension": ".cbp"
+    },
+    {
+      "path": "CodeBlocks\\siruri de caractere\\p11\\pg5.depend",
+      "name": "pg5.depend",
+      "extension": ".depend"
+    },
+    {
+      "path": "CodeBlocks\\siruri de caractere\\p11\\pg5.layout",
+      "name": "pg5.layout",
+      "extension": ".layout"
+    },
+    {
+      "path": "CodeBlocks\\siruri de caractere\\p11\\bin\\Debug\\p10\\f11\\pg5.exe",
+      "name": "pg5.exe",
+      "extension": ".exe"
+    },
+    {
+      "path": "CodeBlocks\\siruri de caractere\\p11\\obj\\Debug\\main.o",
+      "name": "main.o",
+      "extension": ".o"
+    },
+    {
+      "path": "CodeBlocks\\siruri de caractere\\p13\\BAC.TXT",
+      "name": "BAC.TXT",
+      "extension": ".txt"
+    },
+    {
+      "path": "CodeBlocks\\siruri de caractere\\p13\\main.cpp",
+      "name": "main.cpp",
+      "extension": ".cpp"
+    },
+    {
+      "path": "CodeBlocks\\siruri de caractere\\p13\\p13.cbp",
+      "name": "p13.cbp",
+      "extension": ".cbp"
+    },
+    {
+      "path": "CodeBlocks\\siruri de caractere\\p13\\p13.depend",
+      "name": "p13.depend",
+      "extension": ".depend"
+    },
+    {
+      "path": "CodeBlocks\\siruri de caractere\\p13\\p13.layout",
+      "name": "p13.layout",
+      "extension": ".layout"
+    },
+    {
+      "path": "CodeBlocks\\siruri de caractere\\p13\\bin\\Debug\\p13.exe",
+      "name": "p13.exe",
+      "extension": ".exe"
+    },
+    {
+      "path": "CodeBlocks\\siruri de caractere\\p13\\obj\\Debug\\main.o",
+      "name": "main.o",
+      "extension": ".o"
+    },
+    {
+      "path": "CodeBlocks\\siruri de caractere\\p14\\BAC.TXT",
+      "name": "BAC.TXT",
+      "extension": ".txt"
+    },
+    {
+      "path": "CodeBlocks\\siruri de caractere\\p14\\main.cpp",
+      "name": "main.cpp",
+      "extension": ".cpp"
+    },
+    {
+      "path": "CodeBlocks\\siruri de caractere\\p14\\p14.cbp",
+      "name": "p14.cbp",
+      "extension": ".cbp"
+    },
+    {
+      "path": "CodeBlocks\\siruri de caractere\\p14\\p14.layout",
+      "name": "p14.layout",
+      "extension": ".layout"
+    },
+    {
+      "path": "CodeBlocks\\siruri de caractere\\p14\\bin\\Debug\\p14.exe",
+      "name": "p14.exe",
+      "extension": ".exe"
+    },
+    {
+      "path": "CodeBlocks\\siruri de caractere\\p14\\obj\\Debug\\main.o",
+      "name": "main.o",
+      "extension": ".o"
+    },
+    {
+      "path": "CodeBlocks\\siruri de caractere\\p18\\bac.out",
+      "name": "bac.out",
+      "extension": ".out"
+    },
+    {
+      "path": "CodeBlocks\\siruri de caractere\\p18\\main.cpp",
+      "name": "main.cpp",
+      "extension": ".cpp"
+    },
+    {
+      "path": "CodeBlocks\\siruri de caractere\\p18\\p18.cbp",
+      "name": "p18.cbp",
+      "extension": ".cbp"
+    },
+    {
+      "path": "CodeBlocks\\siruri de caractere\\p18\\p18.depend",
+      "name": "p18.depend",
+      "extension": ".depend"
+    },
+    {
+      "path": "CodeBlocks\\siruri de caractere\\p18\\p18.layout",
+      "name": "p18.layout",
+      "extension": ".layout"
+    },
+    {
+      "path": "CodeBlocks\\siruri de caractere\\p18\\bin\\Debug\\p18.exe",
+      "name": "p18.exe",
+      "extension": ".exe"
+    },
+    {
+      "path": "CodeBlocks\\siruri de caractere\\p18\\obj\\Debug\\main.o",
+      "name": "main.o",
+      "extension": ".o"
+    },
+    {
+      "path": "CodeBlocks\\siruri de caractere\\p2\\BAC.TXT",
+      "name": "BAC.TXT",
+      "extension": ".txt"
+    },
+    {
+      "path": "CodeBlocks\\siruri de caractere\\p2\\main.cpp",
+      "name": "main.cpp",
+      "extension": ".cpp"
+    },
+    {
+      "path": "CodeBlocks\\siruri de caractere\\p2\\p2.cbp",
+      "name": "p2.cbp",
+      "extension": ".cbp"
+    },
+    {
+      "path": "CodeBlocks\\siruri de caractere\\p2\\p2.depend",
+      "name": "p2.depend",
+      "extension": ".depend"
+    },
+    {
+      "path": "CodeBlocks\\siruri de caractere\\p2\\p2.layout",
+      "name": "p2.layout",
+      "extension": ".layout"
+    },
+    {
+      "path": "CodeBlocks\\siruri de caractere\\p2\\bin\\Debug\\p2.exe",
+      "name": "p2.exe",
+      "extension": ".exe"
+    },
+    {
+      "path": "CodeBlocks\\siruri de caractere\\p2\\obj\\Debug\\main.o",
+      "name": "main.o",
+      "extension": ".o"
+    },
+    {
+      "path": "CodeBlocks\\siruri de caractere\\p3\\main.cpp",
+      "name": "main.cpp",
+      "extension": ".cpp"
+    },
+    {
+      "path": "CodeBlocks\\siruri de caractere\\p3\\p3.cbp",
+      "name": "p3.cbp",
+      "extension": ".cbp"
+    },
+    {
+      "path": "CodeBlocks\\siruri de caractere\\p3\\p3.depend",
+      "name": "p3.depend",
+      "extension": ".depend"
+    },
+    {
+      "path": "CodeBlocks\\siruri de caractere\\p3\\p3.layout",
+      "name": "p3.layout",
+      "extension": ".layout"
+    },
+    {
+      "path": "CodeBlocks\\siruri de caractere\\p3\\bin\\Debug\\p3.exe",
+      "name": "p3.exe",
+      "extension": ".exe"
+    },
+    {
+      "path": "CodeBlocks\\siruri de caractere\\p3\\obj\\Debug\\main.o",
+      "name": "main.o",
+      "extension": ".o"
+    },
+    {
+      "path": "CodeBlocks\\subprograme\\12\\12.cbp",
+      "name": "12.cbp",
+      "extension": ".cbp"
+    },
+    {
+      "path": "CodeBlocks\\subprograme\\12\\12.layout",
+      "name": "12.layout",
+      "extension": ".layout"
+    },
+    {
+      "path": "CodeBlocks\\subprograme\\12\\main.cpp",
+      "name": "main.cpp",
+      "extension": ".cpp"
+    },
+    {
+      "path": "CodeBlocks\\subprograme\\12\\bin\\Debug\\12.exe",
+      "name": "12.exe",
+      "extension": ".exe"
+    },
+    {
+      "path": "CodeBlocks\\subprograme\\12\\obj\\Debug\\main.o",
+      "name": "main.o",
+      "extension": ".o"
+    },
+    {
+      "path": "CodeBlocks\\subprograme\\12.11\\12.11.cbp",
+      "name": "12.11.cbp",
+      "extension": ".cbp"
+    },
+    {
+      "path": "CodeBlocks\\subprograme\\12.11\\12.11.layout",
+      "name": "12.11.layout",
+      "extension": ".layout"
+    },
+    {
+      "path": "CodeBlocks\\subprograme\\12.11\\main.cpp",
+      "name": "main.cpp",
+      "extension": ".cpp"
+    },
+    {
+      "path": "CodeBlocks\\subprograme\\13.11\\13.11.cbp",
+      "name": "13.11.cbp",
+      "extension": ".cbp"
+    },
+    {
+      "path": "CodeBlocks\\subprograme\\13.11\\13.11.layout",
+      "name": "13.11.layout",
+      "extension": ".layout"
+    },
+    {
+      "path": "CodeBlocks\\subprograme\\13.11\\main.cpp",
+      "name": "main.cpp",
+      "extension": ".cpp"
+    },
+    {
+      "path": "CodeBlocks\\subprograme\\14\\14.cbp",
+      "name": "14.cbp",
+      "extension": ".cbp"
+    },
+    {
+      "path": "CodeBlocks\\subprograme\\14\\14.depend",
+      "name": "14.depend",
+      "extension": ".depend"
+    },
+    {
+      "path": "CodeBlocks\\subprograme\\14\\14.layout",
+      "name": "14.layout",
+      "extension": ".layout"
+    },
+    {
+      "path": "CodeBlocks\\subprograme\\14\\main.cpp",
+      "name": "main.cpp",
+      "extension": ".cpp"
+    },
+    {
+      "path": "CodeBlocks\\subprograme\\14\\bin\\Debug\\14.exe",
+      "name": "14.exe",
+      "extension": ".exe"
+    },
+    {
+      "path": "CodeBlocks\\subprograme\\14\\obj\\Debug\\main.o",
+      "name": "main.o",
+      "extension": ".o"
+    },
+    {
+      "path": "CodeBlocks\\subprograme\\15\\15.cbp",
+      "name": "15.cbp",
+      "extension": ".cbp"
+    },
+    {
+      "path": "CodeBlocks\\subprograme\\15\\15.depend",
+      "name": "15.depend",
+      "extension": ".depend"
+    },
+    {
+      "path": "CodeBlocks\\subprograme\\15\\15.layout",
+      "name": "15.layout",
+      "extension": ".layout"
+    },
+    {
+      "path": "CodeBlocks\\subprograme\\15\\main.cpp",
+      "name": "main.cpp",
+      "extension": ".cpp"
+    },
+    {
+      "path": "CodeBlocks\\subprograme\\15\\bin\\Debug\\15.exe",
+      "name": "15.exe",
+      "extension": ".exe"
+    },
+    {
+      "path": "CodeBlocks\\subprograme\\15\\obj\\Debug\\main.o",
+      "name": "main.o",
+      "extension": ".o"
+    },
+    {
+      "path": "CodeBlocks\\subprograme\\17 11\\17 11.cbp",
+      "name": "17 11.cbp",
+      "extension": ".cbp"
+    },
+    {
+      "path": "CodeBlocks\\subprograme\\17 11\\17 11.layout",
+      "name": "17 11.layout",
+      "extension": ".layout"
+    },
+    {
+      "path": "CodeBlocks\\subprograme\\17 11\\main.cpp",
+      "name": "main.cpp",
+      "extension": ".cpp"
+    },
+    {
+      "path": "CodeBlocks\\subprograme\\19.11\\19.11.cbp",
+      "name": "19.11.cbp",
+      "extension": ".cbp"
+    },
+    {
+      "path": "CodeBlocks\\subprograme\\19.11\\19.11.layout",
+      "name": "19.11.layout",
+      "extension": ".layout"
+    },
+    {
+      "path": "CodeBlocks\\subprograme\\19.11\\main.cpp",
+      "name": "main.cpp",
+      "extension": ".cpp"
+    },
+    {
+      "path": "CodeBlocks\\subprograme\\2\\2.cbp",
+      "name": "2.cbp",
+      "extension": ".cbp"
+    },
+    {
+      "path": "CodeBlocks\\subprograme\\2\\2.depend",
+      "name": "2.depend",
+      "extension": ".depend"
+    },
+    {
+      "path": "CodeBlocks\\subprograme\\2\\2.layout",
+      "name": "2.layout",
+      "extension": ".layout"
+    },
+    {
+      "path": "CodeBlocks\\subprograme\\2\\main.cpp",
+      "name": "main.cpp",
+      "extension": ".cpp"
+    },
+    {
+      "path": "CodeBlocks\\subprograme\\2\\bin\\Debug\\2.exe",
+      "name": "2.exe",
+      "extension": ".exe"
+    },
+    {
+      "path": "CodeBlocks\\subprograme\\2\\obj\\Debug\\main.o",
+      "name": "main.o",
+      "extension": ".o"
+    },
+    {
+      "path": "CodeBlocks\\subprograme\\20.11\\20.11.cbp",
+      "name": "20.11.cbp",
+      "extension": ".cbp"
+    },
+    {
+      "path": "CodeBlocks\\subprograme\\20.11\\20.11.layout",
+      "name": "20.11.layout",
+      "extension": ".layout"
+    },
+    {
+      "path": "CodeBlocks\\subprograme\\20.11\\date.in",
+      "name": "date.in",
+      "extension": ".in"
+    },
+    {
+      "path": "CodeBlocks\\subprograme\\20.11\\main.cpp",
+      "name": "main.cpp",
+      "extension": ".cpp"
+    },
+    {
+      "path": "CodeBlocks\\subprograme\\20.11\\bin\\Debug\\20.11.exe",
+      "name": "20.11.exe",
+      "extension": ".exe"
+    },
+    {
+      "path": "CodeBlocks\\subprograme\\20.11\\obj\\Debug\\main.o",
+      "name": "main.o",
+      "extension": ".o"
+    },
+    {
+      "path": "CodeBlocks\\subprograme\\22\\22.cbp",
+      "name": "22.cbp",
+      "extension": ".cbp"
+    },
+    {
+      "path": "CodeBlocks\\subprograme\\22\\22.depend",
+      "name": "22.depend",
+      "extension": ".depend"
+    },
+    {
+      "path": "CodeBlocks\\subprograme\\22\\22.layout",
+      "name": "22.layout",
+      "extension": ".layout"
+    },
+    {
+      "path": "CodeBlocks\\subprograme\\22\\main.cpp",
+      "name": "main.cpp",
+      "extension": ".cpp"
+    },
+    {
+      "path": "CodeBlocks\\subprograme\\22\\bin\\Debug\\22.exe",
+      "name": "22.exe",
+      "extension": ".exe"
+    },
+    {
+      "path": "CodeBlocks\\subprograme\\22\\obj\\Debug\\main.o",
+      "name": "main.o",
+      "extension": ".o"
+    },
+    {
+      "path": "CodeBlocks\\subprograme\\30\\30.cbp",
+      "name": "30.cbp",
+      "extension": ".cbp"
+    },
+    {
+      "path": "CodeBlocks\\subprograme\\30\\30.depend",
+      "name": "30.depend",
+      "extension": ".depend"
+    },
+    {
+      "path": "CodeBlocks\\subprograme\\30\\30.layout",
+      "name": "30.layout",
+      "extension": ".layout"
+    },
+    {
+      "path": "CodeBlocks\\subprograme\\30\\main.cpp",
+      "name": "main.cpp",
+      "extension": ".cpp"
+    },
+    {
+      "path": "CodeBlocks\\subprograme\\30\\NUMERE.IN",
+      "name": "NUMERE.IN",
+      "extension": ".in"
+    },
+    {
+      "path": "CodeBlocks\\subprograme\\30\\NUMERE.IN.c",
+      "name": "NUMERE.IN.c",
+      "extension": ".c"
+    },
+    {
+      "path": "CodeBlocks\\subprograme\\30\\bin\\Debug\\30.exe",
+      "name": "30.exe",
+      "extension": ".exe"
+    },
+    {
+      "path": "CodeBlocks\\subprograme\\30\\obj\\Debug\\main.o",
+      "name": "main.o",
+      "extension": ".o"
+    },
+    {
+      "path": "CodeBlocks\\subprograme\\30. b\\30. b.cbp",
+      "name": "30. b.cbp",
+      "extension": ".cbp"
+    },
+    {
+      "path": "CodeBlocks\\subprograme\\30. b\\30. b.layout",
+      "name": "30. b.layout",
+      "extension": ".layout"
+    },
+    {
+      "path": "CodeBlocks\\subprograme\\30. b\\main.cpp",
+      "name": "main.cpp",
+      "extension": ".cpp"
+    },
+    {
+      "path": "CodeBlocks\\subprograme\\31\\31.cbp",
+      "name": "31.cbp",
+      "extension": ".cbp"
+    },
+    {
+      "path": "CodeBlocks\\subprograme\\31\\31.depend",
+      "name": "31.depend",
+      "extension": ".depend"
+    },
+    {
+      "path": "CodeBlocks\\subprograme\\31\\31.layout",
+      "name": "31.layout",
+      "extension": ".layout"
+    },
+    {
+      "path": "CodeBlocks\\subprograme\\31\\main.cpp",
+      "name": "main.cpp",
+      "extension": ".cpp"
+    },
+    {
+      "path": "CodeBlocks\\subprograme\\31\\bin\\Debug\\31.exe",
+      "name": "31.exe",
+      "extension": ".exe"
+    },
+    {
+      "path": "CodeBlocks\\subprograme\\31\\obj\\Debug\\main.o",
+      "name": "main.o",
+      "extension": ".o"
+    },
+    {
+      "path": "CodeBlocks\\subprograme\\31 a\\31 a.cbp",
+      "name": "31 a.cbp",
+      "extension": ".cbp"
+    },
+    {
+      "path": "CodeBlocks\\subprograme\\31 a\\31 a.depend",
+      "name": "31 a.depend",
+      "extension": ".depend"
+    },
+    {
+      "path": "CodeBlocks\\subprograme\\31 a\\31 a.layout",
+      "name": "31 a.layout",
+      "extension": ".layout"
+    },
+    {
+      "path": "CodeBlocks\\subprograme\\31 a\\main.cpp",
+      "name": "main.cpp",
+      "extension": ".cpp"
+    },
+    {
+      "path": "CodeBlocks\\subprograme\\31 a\\bin\\Debug\\31 a.exe",
+      "name": "31 a.exe",
+      "extension": ".exe"
+    },
+    {
+      "path": "CodeBlocks\\subprograme\\31 a\\obj\\Debug\\main.o",
+      "name": "main.o",
+      "extension": ".o"
+    },
+    {
+      "path": "CodeBlocks\\subprograme\\31 var 2\\31 var 2.cbp",
+      "name": "31 var 2.cbp",
+      "extension": ".cbp"
+    },
+    {
+      "path": "CodeBlocks\\subprograme\\31 var 2\\31 var 2.depend",
+      "name": "31 var 2.depend",
+      "extension": ".depend"
+    },
+    {
+      "path": "CodeBlocks\\subprograme\\31 var 2\\31 var 2.layout",
+      "name": "31 var 2.layout",
+      "extension": ".layout"
+    },
+    {
+      "path": "CodeBlocks\\subprograme\\31 var 2\\main.cpp",
+      "name": "main.cpp",
+      "extension": ".cpp"
+    },
+    {
+      "path": "CodeBlocks\\subprograme\\31 var 2\\bin\\Debug\\31 var 2.exe",
+      "name": "31 var 2.exe",
+      "extension": ".exe"
+    },
+    {
+      "path": "CodeBlocks\\subprograme\\31 var 2\\obj\\Debug\\main.o",
+      "name": "main.o",
+      "extension": ".o"
+    },
+    {
+      "path": "CodeBlocks\\subprograme\\31.b\\31.b.cbp",
+      "name": "31.b.cbp",
+      "extension": ".cbp"
+    },
+    {
+      "path": "CodeBlocks\\subprograme\\31.b\\31.b.layout",
+      "name": "31.b.layout",
+      "extension": ".layout"
+    },
+    {
+      "path": "CodeBlocks\\subprograme\\31.b\\main.cpp",
+      "name": "main.cpp",
+      "extension": ".cpp"
+    },
+    {
+      "path": "CodeBlocks\\subprograme\\31.b\\NUMERE.IN",
+      "name": "NUMERE.IN",
+      "extension": ".in"
+    },
+    {
+      "path": "CodeBlocks\\subprograme\\32\\32.cbp",
+      "name": "32.cbp",
+      "extension": ".cbp"
+    },
+    {
+      "path": "CodeBlocks\\subprograme\\32\\32.layout",
+      "name": "32.layout",
+      "extension": ".layout"
+    },
+    {
+      "path": "CodeBlocks\\subprograme\\32\\main.cpp",
+      "name": "main.cpp",
+      "extension": ".cpp"
+    },
+    {
+      "path": "CodeBlocks\\subprograme\\32\\bin\\Debug\\32.exe",
+      "name": "32.exe",
+      "extension": ".exe"
+    },
+    {
+      "path": "CodeBlocks\\subprograme\\32\\obj\\Debug\\main.o",
+      "name": "main.o",
+      "extension": ".o"
+    },
+    {
+      "path": "CodeBlocks\\subprograme\\34\\34.cbp",
+      "name": "34.cbp",
+      "extension": ".cbp"
+    },
+    {
+      "path": "CodeBlocks\\subprograme\\34\\34.depend",
+      "name": "34.depend",
+      "extension": ".depend"
+    },
+    {
+      "path": "CodeBlocks\\subprograme\\34\\34.layout",
+      "name": "34.layout",
+      "extension": ".layout"
+    },
+    {
+      "path": "CodeBlocks\\subprograme\\34\\main.cpp",
+      "name": "main.cpp",
+      "extension": ".cpp"
+    },
+    {
+      "path": "CodeBlocks\\subprograme\\34\\bin\\Debug\\34.exe",
+      "name": "34.exe",
+      "extension": ".exe"
+    },
+    {
+      "path": "CodeBlocks\\subprograme\\34\\obj\\Debug\\main.o",
+      "name": "main.o",
+      "extension": ".o"
+    },
+    {
+      "path": "CodeBlocks\\subprograme\\35\\35.cbp",
+      "name": "35.cbp",
+      "extension": ".cbp"
+    },
+    {
+      "path": "CodeBlocks\\subprograme\\35\\35.depend",
+      "name": "35.depend",
+      "extension": ".depend"
+    },
+    {
+      "path": "CodeBlocks\\subprograme\\35\\35.layout",
+      "name": "35.layout",
+      "extension": ".layout"
+    },
+    {
+      "path": "CodeBlocks\\subprograme\\35\\main.cpp",
+      "name": "main.cpp",
+      "extension": ".cpp"
+    },
+    {
+      "path": "CodeBlocks\\subprograme\\35\\bin\\Debug\\35.exe",
+      "name": "35.exe",
+      "extension": ".exe"
+    },
+    {
+      "path": "CodeBlocks\\subprograme\\35\\obj\\Debug\\main.o",
+      "name": "main.o",
+      "extension": ".o"
+    },
+    {
+      "path": "CodeBlocks\\subprograme\\asda\\asda.cbp",
+      "name": "asda.cbp",
+      "extension": ".cbp"
+    },
+    {
+      "path": "CodeBlocks\\subprograme\\asda\\asda.layout",
+      "name": "asda.layout",
+      "extension": ".layout"
+    },
+    {
+      "path": "CodeBlocks\\subprograme\\asda\\main.cpp",
+      "name": "main.cpp",
+      "extension": ".cpp"
+    },
+    {
+      "path": "CodeBlocks\\subprograme\\werrerere\\main.cpp",
+      "name": "main.cpp",
+      "extension": ".cpp"
+    },
+    {
+      "path": "CodeBlocks\\subprograme\\werrerere\\werrerere.cbp",
+      "name": "werrerere.cbp",
+      "extension": ".cbp"
+    },
+    {
+      "path": "CodeBlocks\\subprograme\\werrerere\\werrerere.depend",
+      "name": "werrerere.depend",
+      "extension": ".depend"
+    },
+    {
+      "path": "CodeBlocks\\subprograme\\werrerere\\werrerere.layout",
+      "name": "werrerere.layout",
+      "extension": ".layout"
+    },
+    {
+      "path": "CodeBlocks\\subprograme\\werrerere\\bin\\Debug\\werrerere.exe",
+      "name": "werrerere.exe",
+      "extension": ".exe"
+    },
+    {
+      "path": "CodeBlocks\\subprograme\\werrerere\\obj\\Debug\\main.o",
+      "name": "main.o",
+      "extension": ".o"
+    },
+    {
+      "path": "CodeBlocks\\ye\\main.c",
+      "name": "main.c",
+      "extension": ".c"
+    },
+    {
+      "path": "CodeBlocks\\ye\\ye.cbp",
+      "name": "ye.cbp",
+      "extension": ".cbp"
+    },
+    {
+      "path": "CodeBlocks\\ye\\ye.layout",
+      "name": "ye.layout",
+      "extension": ".layout"
+    },
+    {
+      "path": "CodeBlocks\\ye\\bin\\Debug\\ye.exe",
+      "name": "ye.exe",
+      "extension": ".exe"
+    },
+    {
+      "path": "CodeBlocks\\ye\\fd\\fd.cbp",
+      "name": "fd.cbp",
+      "extension": ".cbp"
+    },
+    {
+      "path": "CodeBlocks\\ye\\fd\\fd.layout",
+      "name": "fd.layout",
+      "extension": ".layout"
+    },
+    {
+      "path": "CodeBlocks\\ye\\fd\\main.c",
+      "name": "main.c",
+      "extension": ".c"
+    },
+    {
+      "path": "CodeBlocks\\ye\\fd\\bin\\Debug\\fd.exe",
+      "name": "fd.exe",
+      "extension": ".exe"
+    },
+    {
+      "path": "CodeBlocks\\ye\\fd\\obj\\Debug\\main.o",
+      "name": "main.o",
+      "extension": ".o"
+    },
+    {
+      "path": "CodeBlocks\\ye\\obj\\Debug\\main.o",
+      "name": "main.o",
+      "extension": ".o"
+    },
+    {
+      "path": "CodeBlocks\\ye\\psso\\main.c",
+      "name": "main.c",
+      "extension": ".c"
+    },
+    {
+      "path": "CodeBlocks\\ye\\psso\\psso.cbp",
+      "name": "psso.cbp",
+      "extension": ".cbp"
+    },
+    {
+      "path": "CodeBlocks\\ye\\psso\\psso.depend",
+      "name": "psso.depend",
+      "extension": ".depend"
+    },
+    {
+      "path": "CodeBlocks\\ye\\psso\\psso.layout",
+      "name": "psso.layout",
+      "extension": ".layout"
+    },
+    {
+      "path": "CodeBlocks\\ye\\psso\\bin\\Debug\\psso.exe",
+      "name": "psso.exe",
+      "extension": ".exe"
+    },
+    {
+      "path": "CodeBlocks\\ye\\psso\\obj\\Debug\\main.o",
+      "name": "main.o",
+      "extension": ".o"
+    },
+    {
+      "path": "writing\\behavioural issues.docx",
+      "name": "behavioural issues.docx",
+      "extension": ".docx"
+    },
+    {
+      "path": "writing\\discounts.docx",
+      "name": "discounts.docx",
+      "extension": ".docx"
+    },
+    {
+      "path": "writing\\example.txt",
+      "name": "example.txt",
+      "extension": ".txt"
+    },
+    {
+      "path": "writing\\facilities for old people.docx",
+      "name": "facilities for old people.docx",
+      "extension": ".docx"
+    },
+    {
+      "path": "writing\\Frank Ocean.docx",
+      "name": "Frank Ocean.docx",
+      "extension": ".docx"
+    },
+    {
+      "path": "writing\\New Text Document.txt",
+      "name": "New Text Document.txt",
+      "extension": ".txt"
+    },
+    {
+      "path": "writing\\simple.txt",
+      "name": "simple.txt",
+      "extension": ".txt"
+    }
+  ]
+}

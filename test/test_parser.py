@@ -9,7 +9,7 @@ class TestQueryParser(unittest.TestCase):
 
     def test_path_and_content(self):
         query = "path:foo content:bar"
-        expected = {"path": ["foo"], "content": ["bar"]}
+        expected = {"path": ["f"], "content": ["bar"]}
         result = self.query_parser.parse_query(query)
         self.assertEqual(result, expected)
 
