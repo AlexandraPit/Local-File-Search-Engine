@@ -12,8 +12,8 @@ def crawl_and_index(root_path, **db):
         file_data, errors = crawl_files(root_path)
 
         insert_query = """
-            INSERT INTO files (path, name, extension, content, content_tsvector)
-            VALUES (%s, %s, %s, %s, to_tsvector('english', %s))
+            INSERT INTO files (path, name, extension, content, content_tsvector, modified_time)
+            VALUES (%s, %s, %s, %s, to_tsvector('english', %s), %s)
         """
         curr.executemany(insert_query, file_data)
         conn.commit()

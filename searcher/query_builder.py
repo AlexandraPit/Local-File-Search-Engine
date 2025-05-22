@@ -26,7 +26,7 @@ def build_search_query(parsed_query):
             params.extend([f"%{term}%", term])
         conditions.append("(" + " AND ".join(general_conditions) + ")")
 
-    query = "SELECT path, name, extension FROM files"
+    query = "SELECT path, name, extension, modified_time FROM files"
     if conditions:
         query += " WHERE " + " AND ".join(conditions)
         query += " ORDER BY score DESC"

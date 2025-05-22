@@ -4,8 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7b6a422e-d246-4037-88d2-e3f436233b8c" name="Changes" comment="(refactor): add context-aware widgets">
+    <list default="true" id="7b6a422e-d246-4037-88d2-e3f436233b8c" name="Changes" comment="(refactor): moved query-activated widgets to the widget_factory">
+      <change afterPath="$PROJECT_DIR$/indexer/metadata_analyzer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/2972a7fb-95a2-4aa9-929e-376c2530871c.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/2972a7fb-95a2-4aa9-929e-376c2530871c.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/2972a7fb-95a2-4aa9-929e-376c2530871c/storage_v2/_src_/database/filesystem.q1pFog/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/2972a7fb-95a2-4aa9-929e-376c2530871c/storage_v2/_src_/database/filesystem.q1pFog/schema/public.abK9xQ.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/main_cotroller.py" beforeDir="false" afterPath="$PROJECT_DIR$/controller/main_cotroller.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/scorer.py" beforeDir="false" afterPath="$PROJECT_DIR$/controller/scorer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/indexer/crawler.py" beforeDir="false" afterPath="$PROJECT_DIR$/indexer/crawler.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/indexer/indexer.py" beforeDir="false" afterPath="$PROJECT_DIR$/indexer/indexer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/searcher/query_builder.py" beforeDir="false" afterPath="$PROJECT_DIR$/searcher/query_builder.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/searcher/searcher.py" beforeDir="false" afterPath="$PROJECT_DIR$/searcher/searcher.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ui/ui.py" beforeDir="false" afterPath="$PROJECT_DIR$/ui/ui.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/widgets/widget_factory.py" beforeDir="false" afterPath="$PROJECT_DIR$/widgets/widget_factory.py" afterDir="false" />
     </list>
@@ -63,7 +72,9 @@
     "Python.db_utils.executor": "Run",
     "Python.indexer.executor": "Run",
     "Python.main.executor": "Run",
+    "Python.main_cotroller.executor": "Run",
     "Python.ocr_runner.executor": "Run",
+    "Python.scorer.executor": "Run",
     "Python.searcher.executor": "Run",
     "Python.spelling_corrector.executor": "Run",
     "Python.ui.executor": "Run",
@@ -121,7 +132,7 @@
       <workItem from="1744984759598" duration="53000" />
       <workItem from="1745507878755" duration="82000" />
       <workItem from="1747205524971" duration="7899000" />
-      <workItem from="1747733500457" duration="13224000" />
+      <workItem from="1747733500457" duration="26764000" />
     </task>
     <task id="LOCAL-00001" summary="feat(search): add searching by path and content qualifiers">
       <option name="closed" value="true" />
@@ -211,7 +222,15 @@
       <option name="project" value="LOCAL" />
       <updated>1747822540685</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="(refactor): moved query-activated widgets to the widget_factory">
+      <option name="closed" value="true" />
+      <created>1747823027951</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1747823027951</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -245,11 +264,13 @@
     <MESSAGE value="(feat): add spelling corrector" />
     <MESSAGE value="(refactor): add facade for spelling corrector" />
     <MESSAGE value="(refactor): add context-aware widgets" />
-    <option name="LAST_COMMIT_MESSAGE" value="(refactor): add context-aware widgets" />
+    <MESSAGE value="(refactor): moved query-activated widgets to the widget_factory" />
+    <option name="LAST_COMMIT_MESSAGE" value="(refactor): moved query-activated widgets to the widget_factory" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/assignment_file_search$main.coverage" NAME="main Coverage Results" MODIFIED="1747822932634" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/assignment_file_search$main.coverage" NAME="main Coverage Results" MODIFIED="1747915169749" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/assignment_file_search$controller.coverage" NAME="controller Coverage Results" MODIFIED="1744469661138" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/assignment_file_search$main_cotroller.coverage" NAME="main_cotroller Coverage Results" MODIFIED="1747911250349" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/controller" />
     <SUITE FILE_PATH="coverage/assignment_file_search$indexer.coverage" NAME="indexer Coverage Results" MODIFIED="1744552452222" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/assignment_file_search$widget_factory.coverage" NAME="widget_factory Coverage Results" MODIFIED="1747820343544" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/widgets" />
     <SUITE FILE_PATH="coverage/assignment_file_search$database.coverage" NAME="database Coverage Results" MODIFIED="1742748998269" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
@@ -257,7 +278,8 @@
     <SUITE FILE_PATH="coverage/assignment_file_search$.coverage" NAME=" Coverage Results" MODIFIED="1744647097982" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
     <SUITE FILE_PATH="coverage/assignment_file_search$db_utils.coverage" NAME="db_utils Coverage Results" MODIFIED="1742731927264" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/assignment_file_search$ocr_runner.coverage" NAME="ocr_runner Coverage Results" MODIFIED="1747480124626" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../../IP/OpenCVApplication-PROJECT/OpenCVApplication-VS2022_OCV490_basic" />
-    <SUITE FILE_PATH="coverage/assignment_file_search$ui.coverage" NAME="ui Coverage Results" MODIFIED="1747816244872" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ui" />
+    <SUITE FILE_PATH="coverage/assignment_file_search$scorer.coverage" NAME="scorer Coverage Results" MODIFIED="1747909439187" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/controller" />
+    <SUITE FILE_PATH="coverage/assignment_file_search$ui.coverage" NAME="ui Coverage Results" MODIFIED="1747915168311" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ui" />
     <SUITE FILE_PATH="coverage/assignment_file_search$searcher.coverage" NAME="searcher Coverage Results" MODIFIED="1744535361543" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/assignment_file_search$spelling_corrector.coverage" NAME="spelling_corrector Coverage Results" MODIFIED="1747736149053" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/spelling_corrector" />
   </component>

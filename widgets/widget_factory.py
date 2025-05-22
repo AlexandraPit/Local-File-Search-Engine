@@ -13,10 +13,10 @@ class WidgetFactory:
         return [creator() for condition, creator in self.rules if condition(results, query)]
 
     def is_log_files(self, results, query=None):
-        return any(path.endswith(".log") for path, _ in results)
+        return any(item["path"].endswith(".log") for item in results)
 
     def is_image_files(self, results, query=None):
-        return sum(1 for path, _ in results if path.endswith(('.jpg', '.png', '.jpeg'))) >= 3
+        return sum(1 for item in results if item["path"].endswith(('.jpg', '.png', '.jpeg'))) >= 3
 
     def is_calculator(self, results, query):
         return query and "calculator" in query.lower()
@@ -25,14 +25,14 @@ class WidgetFactory:
         return query and "clock" in query.lower()
 
     def create_log_widget(self):
-        return lambda frame: tk.Label(frame, text="Analyze Logs Widget").pack()
+        return lambda frame: tk.Label(frame, text="Analyze Logs Widget").pack(pady=10)
 
     def create_gallery_widget(self):
-        return lambda frame: tk.Label(frame, text="View as Gallery Widget").pack()
+        return lambda frame: tk.Label(frame, text="View as Gallery Widget").pack(pady=10)
 
     def create_calculator_widget(self):
-        return lambda frame: tk.Label(frame, text="Calculator Widget (Mockup)", font=("Arial", 12)).pack()
+        return lambda frame: tk.Label(frame, text="Calculator Widget (Mockup)", font=("Arial", 12)).pack(pady=10)
 
     def create_clock_widget(self):
         from time import strftime
-        return lambda frame: tk.Label(frame, text=f"Current time: {strftime('%H:%M:%S')}", font=("Arial", 12)).pack()
+        return lambda frame: tk.Label(frame, text=f"Current time: {strftime('%H:%M:%S')}", font=("Arial", 12)).pack(pady=10)

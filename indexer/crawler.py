@@ -1,4 +1,6 @@
 import os
+from datetime import datetime
+
 from previewer.file_type_checker import is_text_file, read_text_file
 
 def crawl_files(root_path):
@@ -18,6 +20,12 @@ def crawl_files(root_path):
                 errors.append(f"Failed to read {full_path}: {e}")
                 content = None
 
-            files.append((rel_path, name, extension, content, content or ""))
+            try:
+                modified_time = datetime.fromtimestamp(os.path.getmtime(full_path))
+            except Exception as e:
+                errors.append(f"Failed to get modified time for {full_path}: {e}")
+                modified_time = None
+
+            files.append((rel_path, name, extension, content, content or "", modified_time))
 
     return files, errors

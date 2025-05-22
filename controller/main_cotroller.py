@@ -2,7 +2,7 @@ from controller.query_parser import QueryParser
 from controller.scorer import ScoreCalculator
 from controller.observer_manager import ObserverManager
 from indexer.indexer import crawl_and_index
-from searcher.searcher import search_files
+from searcher.searcher import fetch_and_format_results
 from previewer.preview import get_file_preview
 from previewer.file_type_checker import is_text_file
 from database.maintain_db import clear_database
@@ -24,8 +24,7 @@ class Controller:
             return []
 
         parsed = self.parser.parse_query(query)
-        raw_results = search_files(parsed, **self.db)
-
+        raw_results = fetch_and_format_results(parsed, **self.db)
         frequent_terms = self.observer_manager.get_frequent_terms()
 
         ranked_results = self.scorer.rank_files(raw_results, frequent_terms)
