@@ -165,12 +165,12 @@ class SearchApp:
             create_widget(self.widget_frame)
 
     def show_metadata_summary(self, file_type_counts, year_counts, language_counts):
-        tk.Label(self.widget_frame, text="Metadata Summary", font=("Arial", 14, "bold")).pack()
+        tk.Label(self.widget_frame, text="Metadata Summary", font=("Arial", 14, "bold")).pack(pady=10)
 
         def add_section(title, counter):
-            tk.Label(self.widget_frame, text=title, font=("Arial", 12, "underline")).pack()
+            tk.Label(self.widget_frame, text=title, font=("Arial", 12, "underline")).pack(pady=5)
             for k, v in counter.items():
-                tk.Label(self.widget_frame, text=f"{str(k).upper()} ({v})").pack()
+                tk.Label(self.widget_frame, text=f"{str(k).upper()} ({v})").pack(anchor=tk.W, padx=5)
 
         add_section("File Types", file_type_counts)
         add_section("Modified Years", year_counts)
